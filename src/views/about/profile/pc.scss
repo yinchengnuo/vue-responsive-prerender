@@ -1,0 +1,114 @@
+@media screen and (min-width: 1200px) {
+  .profile {
+    .sec1 {
+      background-image: url("../../../assets/about/profile/bg1.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100% 100%;
+      height: 467px;
+      .content {
+        p {
+          width: 1420px;
+          margin: 0 auto;
+          font-size: 16px;
+          font-weight: 400;
+          color: #333333;
+          line-height: 38px;
+          text-align: center;
+          letter-spacing: 1px;
+        }
+      }
+      .data {
+        width: 1420px;
+        margin: 32px auto 0;
+        @include flex();
+        justify-content: space-evenly;
+        .item {
+          font-size: 16px;
+          font-weight: 500;
+          color: #2B303A;
+          line-height: 22px;
+          letter-spacing: 2px;
+          @include flex(column);
+          .num {
+            @include flex();
+            align-items: flex-end;
+            .count-to {
+              font-size: 48px;
+              font-weight: 500;
+              color: #2487FF;
+              line-height: 42px;
+              letter-spacing: 3px;
+            }
+          }
+          .text {
+            margin-top: 24px;
+          }
+        }
+      }
+    }
+    .sec2 {
+      background-image: url("../../../assets/about/profile/bg2.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100% 100%;
+      height: 797px;
+      .content {
+        height: 446px;
+        width: 1420px;
+        @include flex();
+        margin:  66px auto 0;
+        justify-content: space-between;
+        .left {
+          width: 644px;
+          font-size: 16px;
+          font-weight: 400;
+          color: #333333;
+          line-height: 38px;
+          letter-spacing: 1px;
+        }
+        .right {
+          width: 726px;
+          height: 100%;
+          position: relative;
+          img {
+            object-fit: cover;
+            transition: all .5s;
+            @include abs(0, 0, 193px, 193px);
+            &:hover {
+              transform: scale(1.4);
+            }
+            &:nth-child(1) {
+              top: 0;
+              left: 120px;
+            }
+            &:nth-child(2) {
+              top: 0;
+              left: 394px;
+            }
+            &:nth-child(3) {
+              top: 132px;
+              left: 0px;
+            }
+            &:nth-child(4) {
+              top: 132px;
+              left: 260px;
+            }
+            &:nth-child(5) {
+              top: 132px;
+              left: 535px;
+            }
+            &:nth-child(6) {
+              top: 254px;
+              left: 125px;
+            }
+            &:nth-child(7) {
+              top: 254px;
+              left: 395px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

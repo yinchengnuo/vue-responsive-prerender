@@ -1,0 +1,47 @@
+@media screen and (min-width: 1200px) {
+  .media {
+    .layout {
+      .banner {
+        height: 600px;
+        display: block;
+        object-fit: cover;
+      }
+      .navbar-wrapper {
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 333;
+        height: 55px;
+        margin-bottom: 1px;
+        position: relative;
+        background: #FFFFFF;
+        box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.08);
+        &.fixed {
+          position: fixed;
+        }
+        .navbar {
+          height: 100%;
+          width: 1420px;
+          margin: 0 auto;
+          @include flex();
+          justify-content: flex-start;
+          .router-link {
+            height: 100%;
+            @include flex();
+            position: relative;
+            margin-right: 66px;
+            &.active {
+              &::after {
+                content: "";
+                background: #2487FF;
+                @include abs(auto, 50%, 84px, 1px);
+                bottom: 0;
+                transform: translateX(-50%);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+@media screen and (min-width: 1200px) {
+  .service {
+    .banner {
+      height: 600px;
+      display: block;
+      object-fit: cover;
+    }
+    .content {
+      .item {
+        width: 1420px;
+        height: 443px;
+        @include flex();
+        margin: 0 auto 88px;
+        justify-content: space-between;
+        > img {
+          width: 788px;
+          height: 443px;
+        }
+        > div {
+          width: 584px;
+          height: 100%;
+          @include flex(column);
+          align-items: flex-start;
+          div {
+            font-size: 32px;
+            font-weight: 500;
+            color: #1F2329;
+            line-height: 45px;
+            letter-spacing: 1px;
+          }
+          p {
+            font-size: 16px;
+            font-weight: 400;
+            color: #8E99A9;
+            line-height: 26px;
+            margin: 24px 0 48px;
+          }
+          span {
+            width: 179px;
+            height: 51px;
+            @include flex();
+            font-size: 24px;
+            cursor: pointer;
+            font-weight: 500;
+            color: #FFFFFF;
+            line-height: 33px;
+            letter-spacing: 1px;
+            border-radius: 26px;
+            background: #2487FF;
+            box-shadow: 0px 2px 4px 0px #2487FF;
+            &.no {
+              cursor: wait;
+              background: #E75848;
+              box-shadow: 0px 2px 4px 0px #E75848;
+            }
+          }
+        }
+      }
+    }
+  }
+}

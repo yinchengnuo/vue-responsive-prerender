@@ -1,0 +1,53 @@
+<template>
+  <div class="culture">
+    <div class="sec1 overflow">
+      <div class="content">
+        <img src="@/assets/about/culture/culture.png">
+        <div>
+          <p>老岳讲感统</p>
+          <p>我们是儿童教育领域的专家</p>
+          <p>老岳（岳明途）当今国内感统行业领军人物，潜心研究儿童早期教育相关课题，带领动漫火车儿童感统训练中心专业师资队伍100余名，在12年时间里帮助10000余名儿童获得专业、科学的感统训练！</p>
+          <p>目前共走遍中国东西南北中30余座省市，开展千人大型感统知识讲座近500余场，普惠挖万千家庭。开设老岳讲感统商学院，累计培养优秀感统精英5000余人次。</p>
+        </div>
+      </div>
+    </div>
+    <div class="sec2 overflow">
+      <div class="sec-pc-t">企业文化</div>
+      <div class="sec-pc-st">爱是一切问题的答案</div>
+      <div class="content">
+        <div v-for="(item, index) in list" :key="index" class="item" @mouseenter="active = index" @mouseleave="active = -1">
+          <img v-if="index === active" :src="item.img1">
+          <img v-else :src="item.img2">
+          <span :class="{ base: index === active }">{{ item.name }}</span>
+          <div class="hover">
+            <span>︿</span>
+            <div>{{ item.val }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>d
+
+<script>
+export default {
+  name: 'AboutCulture',
+  data() {
+    return {
+      active: -1,
+      list: [
+        { name: '公司愿景', val: '成为感统行业最值得尊敬的教育机构', img1: require('@/assets/about/culture/1.png'), img2: require('@/assets/about/culture/11.png') },
+        { name: '公司使命', val: '用标准感统成就美好人生', img1: require('@/assets/about/culture/2.png'), img2: require('@/assets/about/culture/22.png') },
+        { name: '经营理念', val: '用标准感统感动人心', img1: require('@/assets/about/culture/3.png'), img2: require('@/assets/about/culture/33.png') },
+        { name: '价值观', val: '成就孩子 提升自己 务实创新 合作感恩', img1: require('@/assets/about/culture/4.png'), img2: require('@/assets/about/culture/44.png') },
+        { name: '教育理念', val: '爱是一切问题的答案', img1: require('@/assets/about/culture/5.png'), img2: require('@/assets/about/culture/55.png') }
+      ]
+    }
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+@import "./pc.scss";
+@import "./mo.scss";
+</style>

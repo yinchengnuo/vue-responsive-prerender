@@ -1,0 +1,10 @@
+@media screen and (max-width: 1200px) {
+  .index {
+    .sec1 {
+      .news {
+        display: none;
+      }
+      height: calc(100vh - 100vw / 750 * (95 + 100));
+    }
+  }
+}

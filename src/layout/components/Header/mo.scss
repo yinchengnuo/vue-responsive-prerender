@@ -1,0 +1,116 @@
+@media screen and (max-width: 1200px) {
+  .header {
+    .bg, .header-content {
+      display: none;
+    }
+    .header-content-mo {
+      top: 0;
+      left: 0;
+      width: 100vw;
+      z-index: 999999;
+      position: fixed;
+      height: rpx(95);
+      @include flex();
+      padding: 0 rpx(32);
+      background: #ffffff;
+      box-sizing: border-box;
+      justify-content: space-between;
+      > img {
+        width: rpx(158);
+      }
+      > div {
+        width: rpx(127);
+        height: rpx(57);
+        @include flex();
+        background: #2487FF;
+        border-radius: rpx(5);
+        font-size: rpx(24);
+        font-weight: 400;
+        color: #FFFFFF;
+        line-height: rpx(33);
+        img {
+          width: rpx(24);
+          height: rpx(24);
+          margin-left: rpx(4);
+        }
+      }
+      .link {
+        display: block;
+        @include flex();
+        height: rpx(110);
+        font-weight: 400;
+        color: #606060;
+        margin: 0 rpx(32);
+        font-size: rpx(32);
+        line-height: rpx(45);
+        justify-content: flex-start;
+        border-bottom: 1px solid #ebedf0;
+        &:first-child {
+          border: none;
+        }
+      }
+      ::v-deep {
+        .van-popup {
+          align-items: flex-start;
+          .side-content {
+            width: 100%;
+            margin-top: rpx(218);
+            .van-collapse {
+              .van-collapse-item {
+                .van-cell {
+                  padding: rpx(32);
+                }
+                .van-cell__title {
+                  span {
+                    font-size: rpx(32);
+                    font-weight: 400;
+                    color: #606060;
+                    line-height: rpx(45);
+                  }
+                }
+                .router-link {
+                  display: block;
+                  height: rpx(88);
+                  @include flex();
+                  font-weight: 400;
+                  color: #606060;
+                  font-size: rpx(28);
+                  line-height: rpx(40);
+                  justify-content: flex-start;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .footer-content-mo {
+      bottom: 0;
+      width: 100vw;
+      z-index: 666666;
+      position: fixed;
+      @include flex();
+      height: rpx(100);
+      background: #ffffff;
+      > div {
+        flex: 1;
+        height: 100%;
+        @include flex();
+        font-size: rpx(32);
+        font-weight: 500;
+        color: #2487FF;
+        line-height: rpx(45);
+        letter-spacing: rpx(1);
+        &:last-child {
+          color: #ffffff;
+          background: #2487FF;
+        }
+        img {
+          width: rpx(40);
+          height: rpx(40);
+          margin-right: rpx(4);
+        }
+      }
+    }
+  }
+}

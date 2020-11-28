@@ -1,0 +1,158 @@
+@media screen and (min-width: 1200px) {
+  .history {
+    .content {
+      height: 392px;
+      width: 1280px;
+      @include flex();
+      position: relative;
+      margin: 8px auto 0;
+      .line {
+        width: 100%;
+        height: 16px;
+        @include flex();
+        .item {
+          flex: 1;
+          height: 8px;
+          position: relative;
+          border-radius: 5px;
+          background: linear-gradient(90deg, rgba(36, 135, 255, 0.35) 0%, #2487FF 100%);
+          span {
+            font-size: 24px;
+            font-weight: 500;
+            color: #333333;
+            line-height: 33px;
+            @include abs(32px, 206px, 16px, 16px);
+            &.sec {
+              top: -49px
+            }
+          }
+          &::after {
+            content: "";
+            border-radius: 50%;
+            background: #2487FF;
+            transform: translate(-50%, -50%);
+            @include abs(50%, 100%, 16px, 16px);
+          }
+        }
+      }
+      .year {
+        @include abs(0, 416px, 623px, 392px);
+        .num {
+          @include abs(0, 0, 100%, 100%);
+          font-size: 280px;
+          font-weight: 500;
+          color: #333333;
+          line-height: 392px;
+          letter-spacing: 1px;
+          background: linear-gradient(180deg, rgba(36, 135, 255, 0.1) 0%, rgba(36, 135, 255, 0) 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        .img {
+          @include flex();
+          @include abs(124px, 260px, 141px, 141px);
+          span {
+            font-size: 32px;
+            font-weight: 500;
+            color: #FFFFFF;
+            line-height: 45px;
+          }
+          img {
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            @include abs(0, 0, 100%, 100%);
+          }
+        }
+        .text {
+          font-size: 18px;
+          font-weight: 400;
+          color: #262626;
+          line-height: 32px;
+          text-align: center;
+          letter-spacing: 1px;
+          @include abs(285px, 253px, 188px, 64px);
+        }
+      }
+    }
+    .years {
+      z-index: 1;
+      height: 290px;
+      overflow: hidden;
+      position: relative;
+      .choose {
+        height: 32px;
+        width: 1280px;
+        @include flex();
+        margin: 120px auto 0;
+        justify-content: space-between;
+        > img {
+          width: 32px;
+          height: 32px;
+          cursor: pointer;
+        }
+        ::v-deep {
+          .van-tabs {
+            height: 100%;
+            width: 1200px;
+            .van-tabs__wrap {
+              height: 32px;
+            }
+            .van-tabs__nav {
+              background: transparent!important;
+            }
+            .van-tab {
+              padding: 0;
+              width: 120px;
+              font-size: 20px;
+              font-weight: 400;
+              color: #606060;
+              line-height: 28px;
+              letter-spacing: 1px;
+              &.van-tab--active {
+                color: #2487FF;
+              }
+            }
+            .van-tabs__line {
+              background: #2487FF;
+            }
+          }
+        }
+        .swiper-wrapper {
+          flex: 1;
+          height: 100%;
+          overflow: hidden;
+          ::v-deep {
+            .el-tabs__nav-wrap {
+              &::after {
+                background: transparent;
+              }
+              .el-tabs__nav-prev, .el-tabs__nav-next {
+                display: none;
+              }
+              .el-tabs__nav-scroll {
+                @include flex();
+                .el-tabs__item {
+                  height: 32px;
+                  padding: 0 33px;
+                  font-size: 20px;
+                  font-weight: 400;
+                  color: #606060;
+                  line-height: 28px;
+                  letter-spacing: 1px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .wave {
+        z-index: -1;
+        @include abs(0, 0, 100%, 100%);
+        path {
+          fill: rgba(36, 135, 255, 0.05);
+        }
+      }
+    }
+  }
+}

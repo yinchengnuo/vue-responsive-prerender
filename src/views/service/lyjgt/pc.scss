@@ -1,0 +1,104 @@
+@media screen and (min-width: 1200px) {
+  .lyjgt {
+    .banner {
+      height: 600px;
+      display: block;
+      object-fit: cover;
+    }
+    .float {
+      width: 1200px;
+      height: 104px;
+      margin: 0 auto;
+      @include flex();
+      border-radius: 25px;
+      background: #FFFFFF;
+      transform: translateY(-50%);
+      box-shadow: 0px 10px 30px 0px rgba(0, 88, 162, 0.05);
+      .line {
+        width: 1px;
+        height: 60px;
+        background: rgba(0, 0, 0, 0.1);
+      }
+      .item {
+        flex: 1;
+        height: 100%;
+        @include flex();
+        justify-content: flex-start;
+        img {
+          width: 40px;
+          height: 40px;
+          margin: 0 16px 0 56px;
+        }
+        span {
+          font-size: 20px;
+          font-weight: 400;
+          color: #1F2F4D;
+          line-height: 28px;
+        }
+      }
+    }
+    .sec1, .sec2, .sec3 {
+      &.sec2 {
+        background: #F7F8FA;
+        .content {
+          > div {
+            width: 581px;
+            > section {
+              width: 440px;
+              @include flex();
+              flex-wrap: wrap;
+              overflow: hidden;
+              justify-content: flex-start;
+              > p {
+                width: 50%;
+                height: 38px;
+                font-size: 16px;
+                font-weight: 500;
+                color: #1F2F4D;
+                margin-top: 16px;
+                line-height: 22px;
+              }
+            }
+          }
+        }
+      }
+      .content {
+        width: 1080px;
+        height: 474px;
+        @include flex();
+        margin: 0 auto 66px;
+        justify-content: space-between;
+        > img {
+          width: 476px;
+          height: 474px;
+          object-fit: cover;
+        }
+        > div {
+          width: 476px;
+          @include flex(column);
+          align-items: flex-start;
+          > p {
+            font-size: 32px;
+            font-weight: 500;
+            color: #1F2F4D;
+            line-height: 45px;
+            margin-bottom: 16px;
+          }
+          > span {
+            font-size: 24px;
+            font-weight: 500;
+            color: #1F2F4D;
+            line-height: 33px;
+            margin-bottom: 16px;
+          }
+          > section {
+            font-size: 16px;
+            font-weight: 500;
+            color: #5D6982;
+            line-height: 32px;
+          }
+        }
+      }
+    }
+  }
+}

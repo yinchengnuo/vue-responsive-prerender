@@ -1,0 +1,37 @@
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin scrollBar {
+  &::-webkit-scrollbar-track-piece {
+    background: #d3dce6;
+  }
+
+  &::-webkit-scrollbar {
+    width: px(12);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: px(6);
+    background: #99a9bf;
+  }
+}
+
+@mixin abs($t: 0, $l: 0, $w: auto, $h: auto) {
+	top: $t;
+	left: $l;
+	width: $w;
+	height: $h;
+	position: absolute;
+}
+
+@mixin flex($c: row) {
+	display: flex;
+	flex-direction: $c;
+	align-items: center;
+	justify-content: center;
+}

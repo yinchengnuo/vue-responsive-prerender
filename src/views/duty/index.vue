@@ -1,0 +1,35 @@
+<template>
+  <div class="duty">
+    <div class="layout">
+      <img v-if="$route.path === '/duty/love'" src="@/assets/duty/1.png" class="banner">
+      <img v-if="$route.path === '/duty/talk'" src="@/assets/duty/1.png" class="banner">
+      <img v-if="$route.path === '/duty/tour'" src="@/assets/duty/1.png" class="banner">
+      <div class="navbar-wrapper" :class="{ fixed: this.$store.state.top >= 600 }">
+        <div class="navbar">
+          <router-link class="router-link" to="/duty/love">《爱的守望》公益行</router-link>
+          <router-link class="router-link" to="/duty/talk">家长讲座</router-link>
+          <router-link class="router-link" to="/duty/tour">全国巡讲</router-link>
+        </div>
+      </div>
+    </div>
+    <keep-alive>
+      <router-view />
+    </keep-alive>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'Duty',
+  data() {
+    return {
+
+    }
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+@import "./pc.scss";
+@import "./mo.scss";
+</style>

@@ -1,0 +1,73 @@
+@media screen and (min-width: 1200px) {
+  .team {
+    .content {
+      width: 1420px;
+      @include flex();
+      margin: 66px auto;
+      align-items: flex-start;
+      justify-content: space-between;
+      .left {
+        width: 212px;
+        padding-top: 56px;
+        @include flex(column);
+        align-items: flex-start;
+        .item {
+          opacity: 0.5;
+          cursor: pointer;
+          font-size: 24px;
+          font-weight: 400;
+          color: #1F2329;
+          line-height: 33px;
+          margin-bottom: 28px;
+          transition: all 0.5s;
+          &:last-child {
+            margin-bottom: 0;
+          }
+          &.active {
+            opacity: 1;
+          }
+        }
+      }
+      .right {
+        flex: 1;
+        @include flex();
+        justify-content: space-between;
+        img {
+          width: 489px;
+          height: 685px;
+          margin-right: 88px;
+        }
+        .cont {
+          flex: 1;
+          font-size: 16px;
+          font-weight: 400;
+          color: #333333;
+          text-indent: 2em;
+          line-height: 38px;
+          letter-spacing: 1px;
+          margin-bottom: 12px;
+          @include flex(column);
+          align-items: flex-start;
+          p {
+            &:nth-child(1) {
+              text-indent: 0;
+              font-size: 32px;
+              font-weight: 400;
+              color: #1F2329;
+              line-height: 45px;
+              margin-bottom: 8px;
+            }
+            &:nth-child(2) {
+              text-indent: 0;
+              font-size: 24px;
+              font-weight: 400;
+              color: #1F2329;
+              line-height: 33px;
+              margin-bottom: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

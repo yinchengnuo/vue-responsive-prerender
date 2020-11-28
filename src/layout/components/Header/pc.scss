@@ -1,0 +1,168 @@
+@media screen and (min-width: 1200px) {
+  .header {
+    .header-content-mo, .footer-content-mo {
+      display: none;
+    }
+    width: 100%;
+    height: 80px;
+    z-index: 456;
+    position: fixed;
+    color: #ffffff;
+    transition: all 0.3s;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.2) 100%);
+    &.mousein {
+      color: #1F2329;
+    }
+    &.hide {
+      transform: translateY(-100%);
+    }
+    &.show {
+      transform: translateY(0);
+    }
+    .bg {
+      opacity: 0;
+      z-index: -1;
+      transition: all 0.3s;
+      background: #ffffff;
+      @include abs(0, 0, 100%, 100%);
+      box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.1);
+      &.mousein {
+        opacity: 1;
+      }
+    }
+    .header-content {
+      height: 100%;
+      width: 1200px;
+      margin: 0 auto;
+      @include flex();
+      justify-content: space-between;
+      .logo {
+        width: 160px;
+        height: 49px;
+      }
+      .routes {
+        height: 100%;
+        @include flex();
+        .route-wrapper {
+          height: 100%;
+          padding: 0 33px;
+          position: relative;
+          .route {
+            height: 100%;
+            @include flex();
+            font-size: 16px;
+            position: relative;
+            .scalc {
+              @include abs(auto, 0, 100%, 2px);
+              @include flex();
+              bottom: 0;
+              > span {
+                width: 0%;
+                height: 100%;
+                background: #2487FF;
+                &.in {
+                  animation: scalc-in 0s forwards;
+                }
+                &.out {
+                  animation: scalc-out 0s forwards;
+                }
+                &.mounted {
+                  animation-duration: .3s;
+                }
+              }
+            }
+            .router-link {
+              height: 100%;
+              @include flex();
+              &.activing {
+                color: #2487FF;
+              }
+            }
+          }
+          .route-view {
+            z-index: 0;
+            max-height: 0;
+            overflow: hidden;
+            @include flex(column);
+            background: #ffffff;
+            @include abs(100%, 50%, 200vw, auto);
+            transform: translateX(-50%);
+            box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.1);
+            &.in {
+              z-index: 2;
+              animation: view-in 0s forwards;
+            }
+            &.out {
+              z-index: -2;
+              animation: view-out 0s forwards;
+            }
+            &.mounted {
+              animation-duration: .3s;
+            }
+            .router-link {
+              font-size: 16px;
+              @include flex();
+              font-weight: 400;
+              color: #1F2329;
+              margin-top: 20px;
+              line-height: 22px;
+              position: relative;
+              letter-spacing: 1px;
+              &:last-child {
+                margin-bottom: 30px;
+              }
+              &.active {
+                color: #2487FF;
+                &::before {
+                  width: 2px;
+                  content: "";
+                  height: 10px;
+                  margin-right: 4px;
+                  border-radius: 1px;
+                  background: #2487FF;
+                }
+              }
+              span {
+                width: 47px;
+                height: 19px;
+                @include flex();
+                font-size: 12px;
+                font-weight: 400;
+                color: #FFFFFF;
+                margin-left: 4px;
+                line-height: 17px;
+                border-radius: 10px;
+                background: #000000;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @keyframes bg-in {
+    from { background: linear-gradient(180deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.2) 100%); }
+    to { background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%); }
+  }
+  
+  @keyframes bg-out {
+    from { background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%); }
+    to { background: linear-gradient(180deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.2) 100%); }
+  }
+  
+  @keyframes scalc-in {
+    from { width: 0%; }
+    to { width: 100%; }
+  }
+  
+  @keyframes scalc-out {
+    from { width: 100%; }
+    to { width: 0%; }
+  }
+  
+  @keyframes view-in {
+    from { max-height: 0px; }
+    to { max-height: 220px; }
+  }
+}

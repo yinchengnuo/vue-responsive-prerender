@@ -1,0 +1,76 @@
+@media screen and (min-width: 1200px) {
+  .layout {
+    height: 100%;
+    overflow: hidden;
+    .input {
+      ::v-deep {
+        .el-dialog {
+          height: px(352);
+          border-radius: px(20);
+          .el-dialog__header {
+            display: none;
+          }
+          .el-dialog__body {
+            height: 100%;
+            position: relative;
+            box-sizing: border-box;
+            padding: px(42) px(32) 0;
+            .colse {
+              cursor: pointer;
+              transition: all .6s;
+              @include abs(0, px(448), px(48), px(48));
+              &:hover {
+                transform: rotateZ(360deg);
+              }
+            }
+            .ladel {
+              font-size: 16px;
+              font-weight: 600;
+              color: #1f2329;
+              line-height: 22px;
+              margin-bottom: px(8);
+              letter-spacing: px(1);
+            }
+            input {
+              width: 100%;
+              border: none;
+              outline: none;
+              height: px(32);
+              margin-bottom: px(24);
+              box-sizing: border-box;
+              border-bottom: px(1) solid rgba(0, 0, 0, 0.1);
+              &::placeholder {
+                font-size: 14px;
+                font-weight: 400;
+                color: #BBBBBB;
+                line-height: 20px;
+              }
+            }
+            .sub {
+              width: px(328);
+              height: px(50);
+              background: #2487FF;
+              border-radius: px(25);
+              @include flex();
+              cursor: pointer;
+              font-size: 16px;
+              font-weight: 400;
+              color: #FFFFFF;
+              line-height: 22px;
+              letter-spacing: px(3);
+              margin: 0 auto px(16);
+            }
+            .text {
+              font-size: 14px;
+              font-weight: 400;
+              color: #646a73;
+              text-align: center;
+              line-height: 20px;
+              letter-spacing: px(1);
+            }
+          }
+        }
+      }
+    }
+  }
+}
