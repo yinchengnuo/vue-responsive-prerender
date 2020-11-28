@@ -1,12 +1,22 @@
 <template>
   <div class="join">
-    <img src="@/assets/join/1.png" class="banner">
+    <div class="banner-wrapper">
+      <img src="@/assets/join/banner.png">
+      <div class="content">
+        <div class="title">老岳讲感统合作伙伴，全国招募中</div>
+        <div class="btns">
+          <div class="cont" @mouseenter="enter = true" @mouseleave="enter = false" @click="$router.push('/about')">关于我们</div>
+          <div class="get" :class="{ enter: !enter }" @click="$d">立即申请</div>
+        </div>
+      </div>
+    </div>
     <div class="content">
       <div class="sec1">
         <div class="title move-in">携手老岳讲感统   共掘早教万亿市场</div>
         <div class="subtitle move-in">—————    market expectation   —————</div>
         <div class="content">
-          <video ref="bgVideo" class="move-in" src="@/assets/join/wave.mp4" muted autoplay loop />
+          <!-- <video ref="bgVideo" class="move-in" src="@/assets/join/wave.mp4" muted autoplay loop /> -->
+          <img ref="bgVideo" class="move-in" src="@/assets/join/data.png">
           <div class="text move-in">目前中国2~10岁儿童约有1.54亿，每年新出生人口2000万，随着二胎政策的开放，新生人口的数量还将增加。超过80%的儿童存在不同程度的感统失调，50%的儿童存在专注力弱的问题，40%的儿童存在重度感统失调。</div>
         </div>
       </div>

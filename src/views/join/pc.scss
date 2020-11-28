@@ -1,9 +1,54 @@
 @media screen and (min-width: 1200px) {
   .join {
-    .banner {
-      height: 600px;
-      display: block;
-      object-fit: cover;
+    .banner-wrapper {
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+      .banner-ani {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .content {
+        @include flex(column);
+        @include abs(0, 0, 100%, 100%);
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.35) 0%, rgba(5, 5, 5, 0.57) 60%, rgba(8, 8, 8, 0.65) 100%);
+        .title {
+          font-size: 48px;
+          font-weight: 600;
+          color: #FFFFFF;
+          line-height: 67px;
+          letter-spacing: 3px;
+          margin-bottom: 53px;
+        }
+        .btns {
+          @include flex();
+          > div {
+            height: 38px;
+            width: 133px;
+            @include flex();
+            cursor: pointer;
+            margin: 0 18px;
+            font-weight: 400;
+            color: #FFFFFF;
+            font-size: 16px;
+            line-height: 22px;
+            letter-spacing: 1px;
+            border-radius: 19px;
+            background: transparent;
+            border: 1px solid #FFFFFF;
+            &:hover {
+              background: #2487FF;
+              border-color: #2487FF;
+            }
+            &.enter {
+              background: #2487FF;
+              border-color: #2487FF;
+            }
+          }
+        }
+      }
     }
     .content {
       .sec1 {
@@ -39,9 +84,9 @@
             color: #565E61;
             line-height: 38px;
           }
-          video {
+          img {
             z-index: -1;
-            @include abs(55px, 0, 100%, 100%);
+            @include abs(0, 0, 100%, 100%);
           }
         }
       }
@@ -111,7 +156,7 @@
           font-size: 16px;
           line-height: 22px;
           border-radius: 30px;
-          background: #FEBF28;
+          background: #2487FF;
         }
       }
       .sec3 {
