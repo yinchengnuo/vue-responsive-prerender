@@ -1,18 +1,18 @@
 <template>
   <div class="talk duty-item">
     <div class="sec1 overflow">
-      <div class="sec-pc-t">本次活动的名称</div>
-      <div class="sec-pc-st">老岳讲感统 我们在行动 为幼儿大爱前行</div>
+      <div class="sec-pc-t">老岳的1000场讲座</div>
+      <div class="sec-pc-st">点燃一朵朵感统智慧的花朵</div>
       <div class="bg">
         <div class="title">活动背景</div>
         <div class="line" />
-        <div class="text">从 2015 年 4 月起，Ant Design 在蚂蚁金服中后台产品线迅速推广，对接多条业务线，覆盖系统 800 个以上。定位于中台业务的 Ant Design 兼顾专业和非专业的设计人员，具有学习成本低、上手速度快、实现效果好等特点，并且提供从界面设计到前端开发的全链路生态，可以大大提升设计和开发的效率。</div>
+        <div class="text">老岳的六个一工程中，一项重要的愿景就是要用10年时间开场1000场公益讲座。面对缺乏感统知识而给孩子造成感统失调的现代家庭，最迫切需要的事情就是去告诉家长关于感觉统合的知识，授予家长必要的感统理论和训练方式，也就是通过家长讲座的方式去往全国各地，不断为各个地方的家长面对面分享感觉统合。</div>
       </div>
       <div class="intro">
         <div class="left">
           <div class="title">活动介绍</div>
           <div class="line" />
-          <div class="text">从 2015 年 4 月起，Ant Design 在蚂蚁金服中后台产品线迅速推广，对接多条业务线，覆盖系统 800 个以上。定位于中台业务的 Ant Design 兼顾专业和非专业的设计人员，具有学习成本低、上手速度快、实现效果好等特点，并且提供从界面设计到前端开发的全链路生态，可以大大提升设计和开发的效率。</div>
+          <div class="text">截止2020年末，讲座已经进行了530多场，按照每场平均600人到场观看聆听，老岳已经为近32万名家长讲述感觉统合，最少影响了16万组家庭正视感觉统合，接受感觉统合。在讲座中，岳老师和全国不同地方的家长们亲切的打着招呼，近距离的为大家讲述着儿童大脑工作的逻辑和发育原理，讲述着感觉统合的运行机制，也为大家分享了因为哪些不正确的带养方式而造成的儿童感统失调，特别是讲解到不同感统失调的表现时，家长们纷纷表示找到了自己孩子行为表现的根源，再结合岳老师所解析的造成感统失调表现时，家长恍然大悟是自己的错误带养给孩子的生长发育带来了极大的困扰，也表示要继续加强对感觉统合的学习，以及要和孩子一起开展感统训练。</div>
         </div>
         <img src="@/assets/duty/love/1.png">
       </div>
@@ -24,28 +24,28 @@
         <div class="line-dash" />
         <div class="content">
           <div class="item">
-            <div class="year">2017年</div>
-            <div class="month">9月-10月</div>
+            <div class="year">2014年春</div>
+            <div class="month">动漫火车</div>
             <div class="circle" />
-            <div class="text">对本次事件的描述，第几期，要哪些地方，参与哪些事情。文本不超过4行。测试文字不超过4行最大承受限度。</div>
+            <div class="text">老岳开展第一堂家长课堂，现场家庭28组</div>
           </div>
           <div class="item">
-            <div class="year">2017年</div>
-            <div class="month">9月-10月</div>
+            <div class="year">2018年冬</div>
+            <div class="month">山西晋中</div>
             <div class="circle" />
-            <div class="text">对本次事件的描述，第几期，要哪些地方，参与哪些事情。文本不超过4行。测试文字不超过4行最大承受限度。</div>
+            <div class="text">老岳第413场家长讲座，首次千人讲座达成</div>
           </div>
           <div class="item">
-            <div class="year">2017年</div>
-            <div class="month">9月-10月</div>
+            <div class="year">2019年秋</div>
+            <div class="month">江苏扬州</div>
             <div class="circle" />
-            <div class="text">对本次事件的描述，第几期，要哪些地方，参与哪些事情。文本不超过4行。测试文字不超过4行最大承受限度。</div>
+            <div class="text">老岳第500场家长讲座，现场家庭达1100组</div>
           </div>
           <div class="item">
-            <div class="year">2017年</div>
-            <div class="month">9月-10月</div>
+            <div class="year">2020年10月24日</div>
+            <div class="month">浙江杭州</div>
             <div class="circle" />
-            <div class="text">对本次事件的描述，第几期，要哪些地方，参与哪些事情。文本不超过4行。测试文字不超过4行最大承受限度。</div>
+            <div class="text">老岳第533场家长讲座我们仍在路上……</div>
           </div>
         </div>
       </div>

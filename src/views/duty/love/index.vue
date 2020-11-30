@@ -1,7 +1,7 @@
 <template>
   <div class="love duty-item">
     <div class="sec1 overflow">
-      <div class="sec-pc-t">爱的守望</div>
+      <div class="sec-pc-t">活动背景</div>
       <div class="sec-pc-st">让特殊儿童融入社会感统指导公益行</div>
       <div class="bg">
         <div class="title">爱的守望</div>
@@ -10,7 +10,7 @@
       </div>
       <div class="intro">
         <div class="left">
-          <div class="title">让感统失调儿童融入社会</div>
+          <div class="title">活动介绍</div>
           <div class="line" />
           <div class="text">第三季爱的守望从9月15日开始征集，并从8000多个名单中，筛选出最需要老岳帮助的300组家庭，同时对报名未筛选上的家庭开展了线上公益服务。10月9日，老岳的公益团队从郑州出发，先后经山西晋中、河北石家庄、山东济南、安徽合肥、江苏南京、浙江杭州、湖北武汉等站，最后回到河南郑州执行最后一站的公益感统测评。整场公益行中免费测评315个孩子，帮助家长找到了儿童行为表现异常的根源，并做出了训练的指导。同时整场公益行中，老岳连续开展线上直播答疑讲座13场，为共计20多万位家长讲述感统训练知识。</div>
         </div>

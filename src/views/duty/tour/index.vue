@@ -1,18 +1,18 @@
 <template>
   <div class="tour duty-item">
     <div class="sec1 overflow">
-      <div class="sec-pc-t">本次活动的名称</div>
-      <div class="sec-pc-st">老岳讲感统 我们在行动 为幼儿大爱前行</div>
+      <div class="sec-pc-t">老岳的三尺讲台</div>
+      <div class="sec-pc-st">为中国感统教育事业培养后备力量</div>
       <div class="bg">
         <div class="title">活动背景</div>
         <div class="line" />
-        <div class="text">从 2015 年 4 月起，Ant Design 在蚂蚁金服中后台产品线迅速推广，对接多条业务线，覆盖系统 800 个以上。定位于中台业务的 Ant Design 兼顾专业和非专业的设计人员，具有学习成本低、上手速度快、实现效果好等特点，并且提供从界面设计到前端开发的全链路生态，可以大大提升设计和开发的效率。</div>
+        <div class="text">做中国感统教育行业的标准化推动者，是老岳的最大愿景。中国不乏感统失调儿童，也存在很多家长对专业感觉统合缺少认知。而能够帮助家长帮助孩子的专业感统教育从业者，还无法匹配上庞大的家庭需求量，针对这样的情况，老岳把培养100万名感统训练老师，视作了自己的责任和目标。</div>
       </div>
       <div class="intro">
         <div class="left">
           <div class="title">活动介绍</div>
           <div class="line" />
-          <div class="text">从 2015 年 4 月起，Ant Design 在蚂蚁金服中后台产品线迅速推广，对接多条业务线，覆盖系统 800 个以上。定位于中台业务的 Ant Design 兼顾专业和非专业的设计人员，具有学习成本低、上手速度快、实现效果好等特点，并且提供从界面设计到前端开发的全链路生态，可以大大提升设计和开发的效率。</div>
+          <div class="text">从感觉统合认证研修班、高级班、实战班、测评班中走出的专业感统老师已经有近万人的规模，他们回到各自的城市，在不同的机构中为各地的家庭开展来自老岳的感觉统合训练。然而老岳的目标远不止于此，2019下半年度，老岳来到郑州幼儿师范专科院校，正式开始了他的三尺讲台生涯，从第一学期的几十名学生，到后来每逢开课就是整个阶梯教室爆满，岳老师在新的阵地上继续他推动感统教育事业的征程。</div>
         </div>
         <img src="@/assets/duty/love/1.png">
       </div>
@@ -25,27 +25,27 @@
         <div class="content">
           <div class="item">
             <div class="year">2017年</div>
-            <div class="month">9月-10月</div>
+            <div class="month">7月</div>
             <div class="circle" />
-            <div class="text">对本次事件的描述，第几期，要哪些地方，参与哪些事情。文本不超过4行。测试文字不超过4行最大承受限度。</div>
+            <div class="text">岳老师首次用7天时间，培训来自全国各地慕名而来的感统学员。</div>
           </div>
           <div class="item">
-            <div class="year">2017年</div>
-            <div class="month">9月-10月</div>
+            <div class="year">2018年</div>
+            <div class="month">5月</div>
             <div class="circle" />
-            <div class="text">对本次事件的描述，第几期，要哪些地方，参与哪些事情。文本不超过4行。测试文字不超过4行最大承受限度。</div>
+            <div class="text">老岳讲感统商学院正式成立，以培养专业感统训练老师为己任。</div>
           </div>
           <div class="item">
-            <div class="year">2017年</div>
-            <div class="month">9月-10月</div>
+            <div class="year">2019年</div>
+            <div class="month">9月</div>
             <div class="circle" />
-            <div class="text">对本次事件的描述，第几期，要哪些地方，参与哪些事情。文本不超过4行。测试文字不超过4行最大承受限度。</div>
+            <div class="text">老岳走进郑州幼儿师范高等专科院校，和学校联手为社会输出感统人才。</div>
           </div>
           <div class="item">
-            <div class="year">2017年</div>
-            <div class="month">9月-10月</div>
+            <div class="year">2020年</div>
+            <div class="month">7月</div>
             <div class="circle" />
-            <div class="text">对本次事件的描述，第几期，要哪些地方，参与哪些事情。文本不超过4行。测试文字不超过4行最大承受限度。</div>
+            <div class="text">老岳的国内首家标准感觉统合训练场落成，更快更标准的进行感觉统合培训学习。</div>
           </div>
         </div>
       </div>

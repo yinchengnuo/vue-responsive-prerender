@@ -9,6 +9,7 @@
       &::before {
         content: "";
         z-index: 0;
+        background: rgba(0, 0, 0, .5);
         @include abs(0, 0, 100%, 100%);
         background-image: url("../../assets//index/mask.png");
       }
