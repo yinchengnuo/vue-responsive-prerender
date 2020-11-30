@@ -6,7 +6,7 @@
         <div class="title">{{ data.title }}</div>
         <div class="html" v-html="data.content" />
       </div>
-      <div v-if="data" class="right">
+      <div v-if="data" class="right" :style="{ top: top + 'px' }">
         <div class="title">相关阅读</div>
         <div v-if="data.recommend && data.recommend[0]" class="article" @click="detail(data.recommend[0])">
           <img :src="data.recommend[0].pic">
@@ -34,11 +34,20 @@ export default {
   name: 'MediaArticle',
   data() {
     return {
+      top: 0,
       data: null
     }
   },
   mounted() {
     this.get()
+    window.addEventListener('scroll', e => {
+      const top = e.target.documentElement.scrollTop
+      const height = document.getElementsByClassName('article')[0].offsetHeight
+      console.log(height)
+      if (top >= 100 && top <= (height - 666)) {
+        this.top = e.target.documentElement.scrollTop - 100
+      }
+    })
   },
   beforeRouteUpdate(to, from, next) {
     next()

@@ -43,7 +43,8 @@ module.exports = {
     proxy: {
       [process.env.VUE_APP_BASE_API]: {
         changeOrigin: true,
-        target: 'http://192.168.99.170:8080/DMHCApi',
+        // target: 'http://192.168.99.170:8080/DMHCApi',
+        target: 'https://java.dmhcedu.cn/DMHCApi',
         pathRewrite: {
           ['^' + process.env.VUE_APP_BASE_API]: ''
         }
