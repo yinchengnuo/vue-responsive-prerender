@@ -1,5 +1,5 @@
 <template>
-  <div class="tour">
+  <div class="tour duty-item">
     <div class="sec1 overflow">
       <div class="sec-pc-t">本次活动的名称</div>
       <div class="sec-pc-st">老岳讲感统 我们在行动 为幼儿大爱前行</div>

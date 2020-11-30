@@ -44,7 +44,7 @@
     <div class="sec3 overflow">
       <div class="sec-pc-t">产品与服务 赋能中国早幼教</div>
       <div class="sec-pc-st">结合中国传统家庭教育习惯，推出符合中国国情感统教育体系</div>
-      <el-tabs v-model="sec3.active" @tab-click="({ index }) => $refs.sec3Swiper.$emit('slideTo', index)">
+      <el-tabs v-model="sec3.active" @tab-click="({ index }) => $refs.sec3Swiper.$emit('slideTo', index - 1)">
         <el-tab-pane label="启语慧声（建设中)" name="-1" disabled />
         <el-tab-pane v-for="(item, index) in sec3.data" :key="index" :label="item.name" :name="index.toString()" />
       </el-tabs>

@@ -24,7 +24,7 @@
           <div><img src="@/assets/service/dmhc/7.png">语言能力</div>
         </div>
         <div class="right">
-          <video autoplay muted controls src="https://dmhc-admin.oss-cn-beijing.aliyuncs.com/website/2643767287230518.5.%E8%80%81%E5%B2%B3%E8%AE%B2%E6%84%9F%E7%BB%9F%E5%AE%A3%E4%BC%A0%E7%89%87(%E6%97%A0LOGO3%E5%88%86%E9%92%9F%E7%89%88).mp4" />
+          <video autoplay muted controls src="https://dmhc-admin.oss-cn-beijing.aliyuncs.com/website/9867576994161028.%E8%80%81%E5%B2%B3%E8%AE%B2%E6%84%9F%E7%BB%9F%E5%AE%A3%E4%BC%A0%E7%89%87(%E6%97%A0LOGO3%E5%88%86%E9%92%9F%E7%89%88).mp4" />
         </div>
       </div>
     </div>
