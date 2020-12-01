@@ -42,8 +42,7 @@ export default {
     this.get()
     window.addEventListener('scroll', e => {
       const top = e.target.documentElement.scrollTop
-      const height = document.getElementsByClassName('article')[0].offsetHeight
-      console.log(height)
+      const height = document.getElementsByClassName('article')[0] ? document.getElementsByClassName('article')[0].offsetHeight : 0
       if (top >= 100 && top <= (height - 666)) {
         this.top = e.target.documentElement.scrollTop - 100
       }

@@ -1,6 +1,9 @@
 @media screen and (min-width: 1200px) {
   .index {
     .sec1 {
+      .mo-center, .mo-more {
+        display: none;
+      }
       z-index: 1;
       height: 100vh;
       position: relative;
@@ -74,6 +77,9 @@
     .sec2 {
       overflow: hidden;
       background: #F7F8FA;
+      .mo-content {
+        display: none;
+      }
       .content {
         width: 1420px;
         @include flex();
@@ -166,6 +172,9 @@
             letter-spacing: 1px;
           }
         }
+      }
+      .contentMo {
+        display: none;
       }
       .content {
         width: 1420px;
@@ -297,6 +306,9 @@
           }
         }
       }
+      .contentMo {
+        display: none;
+      }
       .content {
         height: 480px;
         position: relative;
@@ -372,6 +384,9 @@
       }
     }
     .sec5 {
+      .contentMo {
+        display: none;
+      }
       .content {
         width: 1420px;
         height: 400px;
@@ -381,19 +396,15 @@
         .poster {
           width: 710px;
           height: 100%;
-          .swiper {
-            height: 100%;
-            ::v-deep {
-              .slider-item {
-                overflow: hidden;
-                border-radius: 12px;
-                background: #FFFFFF;
-                img {
-                  width: 100%;
-                  height: 100%;
-                  object-fit: cover;
-                }
-              }
+          position: relative;
+          img {
+            opacity: 0;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: all 0.5s;
+            @include abs(0, 0, 100%, 100%);
+            &.active {
+              opacity: 1;
             }
           }
         }

@@ -2,8 +2,8 @@
   <div class="service">
     <img src="@/assets/service/banner.png" class="banner">
     <div class="content overflow">
-      <div class="sec-pc-t">产品与服务 赋能中国早幼教</div>
-      <div class="sec-pc-st">结合中国传统家庭教育习惯，推出符合中国国情感统教育体系</div>
+      <div class="sec-t">产品与服务 赋能中国早幼教</div>
+      <div class="sec-st">结合中国传统家庭教育习惯，推出符合中国国情感统教育体系</div>
       <div class="item">
         <img src="@/assets/service/1.png">
         <div>

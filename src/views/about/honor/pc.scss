@@ -4,6 +4,9 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;
+    .contentMo {
+      display: none;
+    }
     .content {
       width: 1420px;
       @include flex();

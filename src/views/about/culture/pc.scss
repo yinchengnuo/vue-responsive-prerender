@@ -1,6 +1,9 @@
 @media screen and (min-width: 1200px) {
   .culture {
     .sec1 {
+      .contentMo {
+        display: none;
+      }
       .content {
         width: 1420px;
         height: 418px;
@@ -48,6 +51,9 @@
       background-position: center;
       background-size: 100% 100%;
       height: 605px;
+      .contentMo {
+        display: none;
+      }
       .content {
         width: 1234px;
         @include flex();

@@ -90,6 +90,7 @@
             .icon {
               width: 32px;
               height: 32px;
+              cursor: pointer;
               &:hover {
                 & + .code {
                   opacity: 1;

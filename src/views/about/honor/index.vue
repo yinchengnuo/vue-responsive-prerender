@@ -27,6 +27,20 @@
         </div>
       </div>
     </div>
+
+    <div class="contentMo">
+      <div class="nav">
+        <span :class="{ active: type === 0 }" @click="switc(0)">岳老师荣誉</span>
+        <span :class="{ active: type === 1 }" @click="switc(1)">动漫火车荣誉</span>
+      </div>
+      <slider ref="swiper" class="swiper" :options="options">
+        <slideritem v-for="(item, index) in list" :key="index">
+          <img :src="item.img">
+          <span>{{ item.text }}</span>
+        </slideritem>
+      </slider>
+      <div class="split" />
+    </div>
   </div>
 </template>
 

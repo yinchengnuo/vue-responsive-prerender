@@ -112,13 +112,13 @@ const routes = [
           {
             path: 'talk',
             name: 'DutyTalk',
-            meta: { title: '家长讲座' },
+            meta: { title: '老岳的1000场讲座' },
             component: () => import('@/views/duty/talk')
           },
           {
             path: 'tour',
             name: 'DutyTour',
-            meta: { title: '全国巡讲' },
+            meta: { title: '老岳的三尺讲台' },
             component: () => import('@/views/duty/tour')
           }
         ]

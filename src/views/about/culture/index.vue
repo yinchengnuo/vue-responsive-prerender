@@ -10,10 +10,18 @@
           <p>目前共走遍中国东西南北中30余座省市，开展千人大型感统知识讲座近500余场，普惠挖万千家庭。开设老岳讲感统商学院，累计培养优秀感统精英5000余人次。</p>
         </div>
       </div>
+
+      <div class="contentMo">
+        <div class="sec-t">老岳讲感统</div>
+        <div class="sec-st">我们是儿童教育领域的专家</div>
+        <div class="cont">老岳（岳明途）当今国内感统行业领军人物，潜心研究儿童早期教育相关课题，带领动漫火车儿童感统训练中心专业师资队伍100余名，在12年时间里帮助10000余名儿童获得专业、科学的感统训练！目前共走遍中国东西南北中30余座省市，开展千人大型感统知识讲座近500余场，普惠挖万千家庭。开设老岳讲感统商学院，累计培养优秀感统精英5000余人次。2016年创办老岳讲感统线上知识平台，通过腾讯、优酷、爱奇艺、喜马拉雅、千聊、抖音短视频等网络渠道，传播专业感统知识，指导家庭感统训练，目前网内粉丝超过400万，网外粉丝超过5000万！老岳，中国感统教育终身推动者</div>
+        <img src="@/assets/about/culture/culture.png">
+      </div>
     </div>
+    <div class="split" />
     <div class="sec2 overflow">
-      <div class="sec-pc-t">企业文化</div>
-      <div class="sec-pc-st">爱是一切问题的答案</div>
+      <div class="sec-t">企业文化</div>
+      <div class="sec-st">爱是一切问题的答案</div>
       <div class="content">
         <div v-for="(item, index) in list" :key="index" class="item" @mouseenter="active = index" @mouseleave="active = -1">
           <img v-if="index === active" :src="item.img1">
@@ -25,9 +33,19 @@
           </div>
         </div>
       </div>
+
+      <div class="contentMo">
+        <div v-for="(item, index) in list" :key="index" class="item">
+          <p>
+            <img :src="item.img1">
+            <span>{{ item.name }}</span>
+          </p>
+          <div>{{ item.val }}</div>
+        </div>
+      </div>
     </div>
   </div>
-</template>d
+</template>
 
 <script>
 export default {

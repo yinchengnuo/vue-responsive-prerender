@@ -20,8 +20,8 @@
       }
       .data {
         width: 1420px;
-        margin: 32px auto 0;
         @include flex();
+        margin: 32px auto 0;
         justify-content: space-evenly;
         .item {
           font-size: 16px;
@@ -53,6 +53,9 @@
       background-position: center;
       background-size: 100% 100%;
       height: 797px;
+      .contentMo {
+        display: none;
+      }
       .content {
         height: 446px;
         width: 1420px;

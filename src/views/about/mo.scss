@@ -1,5 +1,52 @@
 @media screen and (max-width: 1200px) {
   .about {
-    height: 100%;
+    .layout {
+      .banner {
+        width: 100vw;
+        display: block;
+        height: rpx(375);
+      }
+      .navbar-wrapper {
+        top: 0;
+        z-index: 123;
+        height: rpx(88);
+        position: relative;
+        background: #FFFFFF;
+        box-shadow: rpx(0) rpx(1) rpx(0) rpx(0) rgba(0, 0, 0, 0.08);
+        &.fixed {
+          top: rpx(95);
+          position: fixed;
+        }
+        .navbar {
+          height: 100%;
+          @include flex();
+          padding: 0 rpx(32);
+          box-sizing: border-box;
+          justify-content: flex-start;
+          .router-link {
+            height: 100%;
+            @include flex();
+            font-weight: 400;
+            color: #2A2E2E;
+            font-size: px(24);
+            position: relative;
+            line-height: px(33);
+            margin-right: rpx(42);
+            &.active {
+              color: #2487FF;
+              &::after {
+                content: "";
+                @include abs(auto, 0, 100%, rpx(2));
+                bottom: 0;
+                background: #2487FF;
+              }
+            }
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
   }
 }

@@ -15,6 +15,9 @@
       background: #ffffff;
       box-sizing: border-box;
       justify-content: space-between;
+      &.hide {
+        z-index: 0;
+      }
       > img {
         width: rpx(158);
       }
@@ -92,7 +95,7 @@
       @include flex();
       height: rpx(100);
       background: #ffffff;
-      > div {
+      > div, > a {
         flex: 1;
         height: 100%;
         @include flex();
@@ -112,5 +115,12 @@
         }
       }
     }
+    .van-action-sheet-content {
+      padding: rpx(32);
+      box-sizing: border-box;
+    }
+  }
+  .van-overlay, .van-popup {
+    z-index: 999999!important;
   }
 }

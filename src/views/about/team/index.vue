@@ -13,6 +13,23 @@
         </div>
       </div>
     </div>
+
+    <div class="contentMo">
+      <img class="prev" src="@/assets/about/team/prev.png" @click="$refs.swiper.$emit('slidePre')">
+      <img class="next" src="@/assets/about/team/next.png" @click="$refs.swiper.$emit('slideNext')">
+      <slider ref="swiper" class="swiper" :options="options">
+        <slideritem v-for="(item, index) in list" :key="index">
+          <img class="right" :src="item.img">
+          <div class="text">
+            <div class="name">{{ item.name }}</div>
+            <div class="level">{{ item.level }}</div>
+            <div class="line" />
+            <p v-for="(itemm, indexx) in list[active].cont" :key="indexx">{{ itemm }}</p>
+          </div>
+        </slideritem>
+      </slider>
+      <div class="split" />
+    </div>
   </div>
 </template>
 
@@ -22,6 +39,14 @@ export default {
   data() {
     return {
       active: 0,
+      options: {
+        loop: true,
+        loopedSlides: 8,
+        pagination: false,
+        centeredSlides: true,
+        thresholdDistance: '1',
+        thresholdTime: '666666'
+      },
       list: [
         {
           name: '老岳',

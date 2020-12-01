@@ -1,5 +1,67 @@
 @media screen and (max-width: 1200px) {
   .team {
-    height: 100%;
+    .content {
+      display: none;
+    }
+    .contentMo {
+      position: relative;
+      .prev {
+        z-index: 2;
+        @include abs(rpx(365), rpx(19), rpx(48), rpx(48));
+      }
+      .next {
+        z-index: 2;
+        @include abs(rpx(365), rpx(684), rpx(48), rpx(48));
+      }
+      .swiper {
+        height: auto;
+        ::v-deep  {
+          .slider-item {
+            height: auto;
+            text-align: left;
+            white-space: pre-wrap;
+            flex-direction: column;
+            justify-content: flex-start;
+            > img {
+              width: rpx(597);
+              height: rpx(658);
+              margin-top: rpx(66);
+              object-fit: scale-down;
+            }
+            .text {
+              width: rpx(686);
+              margin-bottom: rpx(66);
+              .name {
+                font-size: rpx(48);
+                font-weight: 500;
+                color: #000000;
+                line-height: rpx(67);
+                margin-bottom: rpx(20);
+              }
+              .level {
+                font-size: rpx(26);
+                font-weight: 500;
+                color: #333333;
+                line-height: rpx(37);
+                margin-bottom: rpx(32);
+              }
+              .line {
+                height: rpx(1);
+                background: #D8D8D8;
+                margin-bottom: rpx(32);
+              }
+              > p {
+                text-indent: 2em;
+                font-size: rpx(24);
+                font-weight: 400;
+                color: #606060;
+                line-height: rpx(42);
+                letter-spacing: rpx(1);
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }

@@ -1,5 +1,58 @@
 @media screen and (max-width: 1200px) {
   .profile {
-    height: 100%;
+    .sec1 {
+      .content {
+        width: rpx(686);
+        margin: 0 auto rpx(24);
+        font-size: rpx(24);
+        font-weight: 400;
+        color: #606060;
+        line-height: rpx(42);
+        letter-spacing: rpx(1);
+      }
+      .data {
+        background-image: url("../../../assets/about/profile/bg1.png");
+        background-size: rpx(750) rpx(375);
+        background-repeat: no-repeat;
+        background-position: center;
+        height: rpx(375);
+        @include flex();
+        flex-wrap: wrap;
+        .item {
+          width: 50%;
+          height: 50%;
+          @include flex(column);
+          font-size: rpx(28);
+          font-weight: 400;
+          color: #606060;
+          line-height: rpx(42);
+          letter-spacing: rpx(1);
+          .count-to {
+            font-size: rpx(36);
+            font-weight: bold;
+            color: #2487FF;
+          }
+        }
+      }
+    }
+    .sec2 {
+      .content {
+        display: none;
+      }
+      .contentMo {
+        position: relative;
+        img {
+          width: 100%;
+        }
+        div {
+          @include abs(rpx(521), rpx(32), rpx(686));
+          font-size: rpx(24);
+          font-weight: 400;
+          color: #606060;
+          line-height: rpx(42);
+          letter-spacing: rpx(1);
+        }
+      }
+    }
   }
 }

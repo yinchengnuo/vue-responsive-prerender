@@ -48,8 +48,8 @@
             </van-collapse-item>
             <van-collapse-item title="社会责任" name="社会责任">
               <router-link class="router-link" to="/duty/love">《爱的守望》公益行</router-link>
-              <router-link class="router-link" to="/duty/talk">家长讲座</router-link>
-              <router-link class="router-link" to="/duty/tour">全国巡讲</router-link>
+              <router-link class="router-link" to="/duty/talk">老岳的1000场讲座</router-link>
+              <router-link class="router-link" to="/duty/tour">老岳的三尺讲台</router-link>
             </van-collapse-item>
           </van-collapse>
           <router-link class="link" to="/join">商学院</router-link>
@@ -58,25 +58,46 @@
       </van-popup>
     </div>
     <div class="footer-content-mo">
-      <div>
+      <div @click="bottom_sheet = true">
         <img src="@/assets/layout/mo-message.png">
         <span>问题留言</span>
       </div>
-      <div>
+      <a href="tel:400-088-0016">
         <img src="@/assets/layout/mo-call.png">
         <span>电话咨询</span>
-      </div>
+      </a>
     </div>
+    <van-action-sheet v-model="bottom_sheet" title="问题留言">
+      <div class="van-action-sheet-content">
+        <van-cell-group>
+          <van-field v-model="name" placeholder="请输入您的姓名" maxlength="20" />
+        </van-cell-group>
+        <van-cell-group>
+          <van-field v-model="phone" placeholder="请输入您的电话" maxlength="11" />
+        </van-cell-group>
+        <van-cell-group>
+          <van-field v-model="message" ype="textarea" maxlength="50" rows="2" autosize show-word-limit placeholder="请简述需要咨询的问题？" />
+        </van-cell-group>
+        <van-cell-group>
+          <van-button type="info" style="width: 100%" @click="submit">提交</van-button>
+        </van-cell-group>
+      </div>
+    </van-action-sheet>
   </div>
 </template>
 
 <script>
+import { api_message } from '@/api'
 export default {
   name: 'Header',
   data() {
     return {
+      name: '',
+      phone: '',
+      message: '',
       show: false,
       activeName: '',
+      bottom_sheet: false,
       hover: 0, // active index
       clicked: false, // 是否点击了展开 nav 的 link 用于在点击 link 后收起 nav
       mounted: false, // 是否 mounted 用于首次打开时防止出现 out 动画
@@ -116,8 +137,8 @@ export default {
           view: {
             links: [
               { to: '/duty/love', name: '《爱的守望》公益行' },
-              { to: '/duty/talk', name: '家长讲座' },
-              { to: '/duty/tour', name: '全国巡讲' }
+              { to: '/duty/talk', name: '老岳的1000场讲座' },
+              { to: '/duty/tour', name: '老岳的三尺讲台' }
             ]
           }
         },
@@ -167,6 +188,7 @@ export default {
       this.mounted = true
     }, 666)
     window.addEventListener('scroll', e => {
+      // console.log(this.$store.state.top)
       this.$store.commit('UP', e.target.documentElement.scrollTop > this.$store.state.top)
       this.$store.commit('TOP', e.target.documentElement.scrollTop)
     })
@@ -200,6 +222,27 @@ export default {
       setTimeout(() => {
         this.clicked = false
       }, 666)
+    },
+    submit() {
+      if (!this.name) {
+        this.$toast('请输入您的姓名')
+        return
+      }
+      if (this.phone.length < 8) {
+        this.$toast('请输入您的联系方式')
+        return
+      }
+      this._loading = this.$loading()
+      api_message({ name: this.name, phone: this.phone, type: '1' }).then(({ data: { code, msg }}) => {
+        if (+code === 200) {
+          this.bottom_sheet = false
+          this.$dialog.alert({ title: '提交成功', message: '我们的老师会第一时间与您取得联系～' })
+        } else {
+          this.$dialog.alert({ title: '', message: msg })
+        }
+      }).finally(() => {
+        this._loading.close()
+      })
     }
   }
 }

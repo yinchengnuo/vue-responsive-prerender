@@ -1,10 +1,10 @@
 <template>
   <div class="love duty-item">
     <div class="sec1 overflow">
-      <div class="sec-pc-t">活动背景</div>
-      <div class="sec-pc-st">让特殊儿童融入社会感统指导公益行</div>
+      <div class="sec-t">爱的守望</div>
+      <div class="sec-st">让特殊儿童融入社会感统指导公益行</div>
       <div class="bg">
-        <div class="title">爱的守望</div>
+        <div class="title">活动背景</div>
         <div class="line" />
         <div class="text">自2018年春，老岳已经先后举办三季《爱的守望》感统指导公益行。2020年的第三季中，更是和北京市慈善基金会联合，加入了教育工程专项基金中让特殊儿童融入社会这个公益项目，为了用感统帮助更多的家庭，为了让更多感统失调的儿童更好更健康的融入社会。老岳这一季爱的守望，将要用1个月的时间，走访8个省市，为300多组家庭面对面免费测评。</div>
       </div>
@@ -99,8 +99,8 @@ export default {
       list: [
         { data: '2018年3月', text: '第一季《爱的守望》老岳走进邯郸某家庭为孩子面对面测评指导 ', img: require('@/assets/duty/love/1.png') },
         { data: '2018年11月', text: '第二季《爱的守望》老岳来到山东某家庭为孩子做测评指导 ', img: require('@/assets/duty/love/2.png') },
-        { data: '2020年9月', text: '老岳赴京参加“让特殊儿童融入社会”公益项目启动仪式，向北京市慈善基金会捐赠105000元善款 ', img: require('@/assets/duty/love/1.png') },
-        { data: '2020年10月', text: '老岳第三季《爱的守望》出发，本次公益行共帮助315组家庭 ', img: require('@/assets/duty/love/2.png') }
+        { data: '2020年9月', text: '老岳赴京参加“让特殊儿童融入社会”公益项目启动仪式，向北京市慈善基金会捐赠105000元善款 ', img: require('@/assets/duty/love/3.png') },
+        { data: '2020年10月', text: '老岳第三季《爱的守望》出发，本次公益行共帮助315组家庭 ', img: require('@/assets/duty/love/4.png') }
       ]
     }
   }

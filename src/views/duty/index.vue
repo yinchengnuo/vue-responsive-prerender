@@ -7,8 +7,8 @@
       <div class="navbar-wrapper" :class="{ fixed: this.$store.state.top >= 600 }">
         <div class="navbar">
           <router-link class="router-link" to="/duty/love">《爱的守望》公益行</router-link>
-          <router-link class="router-link" to="/duty/talk">家长讲座</router-link>
-          <router-link class="router-link" to="/duty/tour">全国巡讲</router-link>
+          <router-link class="router-link" to="/duty/talk">老岳的1000场讲座</router-link>
+          <router-link class="router-link" to="/duty/tour">老岳的三尺讲台</router-link>
         </div>
       </div>
     </div>

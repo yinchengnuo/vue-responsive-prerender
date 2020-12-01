@@ -1,5 +1,8 @@
 @media screen and (min-width: 1200px) {
   .team {
+    .contentMo {
+      display: none;
+    }
     .content {
       width: 1420px;
       @include flex();

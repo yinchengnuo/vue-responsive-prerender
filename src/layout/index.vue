@@ -50,19 +50,11 @@ export default {
   methods: {
     sub() {
       if (!this.name) {
-        if (document.body.offsetWidth >= 1200) {
-          this.$message({ type: 'warning', message: '请输入您的姓名', center: true, offset: 240 })
-        } else {
-          this.$toast('请输入您的姓名')
-        }
+        this.$message({ type: 'warning', message: '请输入您的姓名', center: true, offset: 240 })
         return
       }
       if (this.tel.length < 8) {
-        if (document.body.offsetWidth >= 1200) {
-          this.$message({ type: 'warning', message: '请输入您的联系方式', center: true, offset: 240 })
-        } else {
-          this.$toast('请输入您的联系方式')
-        }
+        this.$message({ type: 'warning', message: '请输入您的联系方式', center: true, offset: 240 })
         return
       }
       this._loading = this.$loading()
@@ -72,17 +64,9 @@ export default {
       })
       api_message({ name: this.name, phone: this.tel, type: '1' }).then(({ data: { code, msg }}) => {
         if (+code === 200) {
-          if (document.body.offsetWidth >= 1200) {
-            this.$alert('我们的老师会第一时间与您取得联系～', '提交成功', { type: 'success' })
-          } else {
-            this.$dialog.alert({ title: '提交成功', message: '我们的老师会第一时间与您取得联系～' })
-          }
+          this.$alert('我们的老师会第一时间与您取得联系～', '提交成功', { type: 'success' })
         } else {
-          if (document.body.offsetWidth >= 1200) {
-            this.$alert(msg, '', { type: 'error' })
-          } else {
-            this.$dialog.alert({ title: '', message: msg })
-          }
+          this.$alert(msg, '', { type: 'error' })
         }
       }).finally(() => {
         this._loading.close()

@@ -1,5 +1,72 @@
 @media screen and (max-width: 1200px) {
   .honor {
-    height: 100%;
+    .content {
+      display: none;
+    }
+    .contentMo {
+      .nav {
+        width: rpx(400);
+        margin: 0 auto;
+        height: rpx(123);
+        @include flex();
+        font-size: rpx(26);
+        font-weight: 500;
+        color: #262626;
+        line-height: rpx(37);
+        letter-spacing: rpx(1);
+        justify-content: space-around;
+        span {
+          flex: 1;
+          height: 100%;
+          @include flex();
+          &.active {
+            color: #2487FF;
+          }
+        }
+      }
+      .swiper {
+        height: rpx(456);
+        margin-bottom: rpx(66);
+        ::v-deep  {
+          .slider-item {
+            width: rpx(477);
+            position: relative;
+            transition: all 3s;
+            flex-direction: column;
+            transform: scale(0.6485507246376812);
+            transition-timing-function: ease;
+            transition-duration: 300ms;
+            img {
+              width: 100%;
+            }
+            span {
+              margin-top: rpx(48);
+              height: rpx(59);
+              @include flex();
+              background: #FFFFFF;
+              border-radius: rpx(30);
+              box-shadow: rpx(0) rpx(4) rpx(10) rpx(0) rgba(0, 0, 0, 0.1);
+              font-size: rpx(24);
+              font-weight: 400;
+              color: #000000;
+              line-height: rpx(66);
+              padding: 0 rpx(24);
+              letter-spacing: rpx(1);
+            }
+          }
+          .slider-item.slider-active {
+            transform: scale(1.0);
+            z-index: 999;
+            span {
+              opacity: 1;
+            }
+          }
+          .slider-item.slider-active-copy {
+            transform:scale(1.0);
+            z-index: 999;
+          }
+        }
+      }
+    }
   }
 }

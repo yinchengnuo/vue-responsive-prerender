@@ -1,10 +1,303 @@
 @media screen and (max-width: 1200px) {
   .index {
     .sec1 {
-      .news {
+      .news, .mouse {
         display: none;
       }
+      &::before {
+        content: "";
+        z-index: 0;
+        background: rgba(0, 0, 0, .5);
+        @include abs(0, 0, 100%, 100%);
+        background-image: url("../../assets//index/mask.png");
+      }
+      @include flex();
+      position: relative;
       height: calc(100vh - 100vw / 750 * (95 + 100));
+      video {
+        z-index: -1;
+        object-fit: cover;
+        @include abs(0, 0, 100%, 100%)
+      }
+      .mo-center {
+        z-index: 2;
+        width: rpx(493);
+        position: relative;
+      }
+      .mo-more {
+        animation: more 1s infinite linear;
+        @include abs(auto, 50%, rpx(48), rpx(48));
+        margin-left: rpx(-24);
+        bottom: rpx(48);
+      }
     }
+    .sec2 {
+      height: rpx(789);
+      position: relative;
+      .content {
+        display: none;
+      }
+      .right {
+        @include abs(rpx(259), rpx(303), rpx(447), rpx(530));
+      }
+      .mo-content {
+        height: 100%;
+        ::v-deep {
+          .slider-item {
+            text-align: left;
+            padding: 0 rpx(32);
+            white-space: pre-wrap;
+            flex-direction: column;
+            box-sizing: border-box;
+            justify-content: flex-start;
+            .cont {
+              font-size: rpx(24);
+              font-weight: 400;
+              color: #606060;
+              line-height: rpx(42);
+              letter-spacing: rpx(1);
+            }
+          }
+        }
+        .page-bar {
+          z-index: 2;
+          @include flex();
+          justify-content: space-between;
+          @include abs(rpx(667), rpx(32), rpx(212), rpx(90));
+          div {
+            writing-mode: vertical-lr;
+            font-size: rpx(26);
+            font-weight: 500;
+            color: #000000;
+            line-height: rpx(37);
+            letter-spacing: rpx(1);
+            &.active {
+              font-size: rpx(32);
+              font-weight: 500;
+              color: #2487FF;
+              line-height: rpx(45);
+              letter-spacing: rpx(2);
+            }
+          }
+        }
+      }
+    }
+    .sec3 {
+      height: rpx(1056);
+      .el-tabs, .content {
+        display: none;
+      }
+      .contentMo {
+        height: rpx(890);
+        ::v-deep {
+          .slider-pagination-bullet {
+            width: rpx(16);
+            height: rpx(16);
+            margin: 0 rpx(8);
+            background: rgba(36, 135, 255, 1);
+            &.slider-pagination-bullet-active {
+              background: #2487FF;
+            }
+          }
+          .slider-wrapper {
+            align-items: flex-start;
+            .slider-item {
+              width: rpx(664);
+              height: rpx(793);
+              margin: 0 rpx(12);
+              overflow: hidden;
+              text-align: left;
+              position: relative;
+              background: #FFFFFF;
+              flex-direction: column;
+              border-radius: rpx(20);
+              align-items: flex-start;
+              justify-content: flex-start;
+              box-shadow: rpx(0) rpx(10) rpx(20) rpx(0) rgba(0, 0, 0, 0.1);
+              .logo {
+                object-fit: scale-down;
+                background: #FFFFFF;
+                @include abs(rpx(269), rpx(32), rpx(206), rpx(96));
+              }
+              .top {
+                width: 100%;
+                height: rpx(320);
+                object-fit: cover;
+                margin-bottom: rpx(76);
+              }
+              .n {
+                font-size: rpx(24);
+                font-weight: 500;
+                color: #606060;
+                line-height: rpx(33);
+                letter-spacing: rpx(1);
+                margin: 0 rpx(32) rpx(16);
+              }
+              .line {
+                width: rpx(32);
+                height: rpx(4);
+                border-radius: rpx(2);
+                background: #2487FF;
+                margin: 0 rpx(32) rpx(16);
+              }
+              .t {
+                margin-left: rpx(32);
+                font-size: rpx(32);
+                font-weight: 600;
+                color: #333333;
+                line-height: rpx(45);
+                margin-bottom: rpx(32);
+              }
+              .links {
+                font-size: rpx(24);
+                font-weight: 400;
+                color: #BBBBBB;
+                line-height: rpx(33);
+                margin: 0 rpx(32) rpx(48);
+                span {
+                  &:nth-child(2) {
+                    &::before, &::after {
+                      content: "";
+                      display: inline-block;
+                      width: rpx(1);
+                      height: rpx(21);
+                      margin: 0 rpx(16);
+                      background: #E8E8E8;
+                    }
+                   }
+                }
+              }
+              .bot {
+                width: 100%;
+                @include flex();
+                height: rpx(169);
+                border-top: rpx(1) solid #F1F1F1;
+                .i {
+                  flex: 1;
+                  height: 100%;
+                  @include flex(column);
+                  .num {
+                    font-size: rpx(26);
+                    font-weight: 400;
+                    color: #2487FF;
+                    line-height: rpx(37);
+                    span {
+                      font-size: rpx(48);
+                      font-weight: 600;
+                      color: #2487FF;
+                      line-height: rpx(67);
+                    }
+                  }
+                  .name {
+                    font-size: rpx(24);
+                    font-weight: 400;
+                    color: #BBBBBB;
+                    line-height: rpx(33);
+                  }
+                }
+              } 
+            }
+          }
+        }
+      }
+    }
+    .sec4 {
+      .content, header {
+        display: none;
+      }
+      .swiper {
+        height: rpx(284);
+        margin: rpx(8) 0 rpx(40);
+        ::v-deep {
+          .slider-item {
+            z-index: 1;
+            width: rpx(426);
+            font-weight: 600;
+            overflow: hidden;
+            margin: 0 rpx(16);
+            position: relative;
+            font-size: rpx(28);
+            line-height: rpx(40);
+            border-radius: rpx(12);
+            &::after {
+              content: "";
+              z-index: -1;
+              background: rgba(0, 0, 0, .5);
+              @include abs(0, 0, 100%, 100%);
+            }
+            img {
+              z-index: -1;
+              object-fit: cover;
+              @include abs(0, 0, 100%, 100%);
+            }
+          }
+        }
+      }
+    }
+    .sec5 {
+      .content {
+        display: none;
+      }
+      .contentMo {
+        .item {
+          @include flex();
+          height: rpx(248);
+          box-sizing: border-box;
+          justify-content: space-between;
+          padding: rpx(30) rpx(20) rpx(30) rpx(40);
+          .left {
+            flex: 1;
+            height: 100%;
+            @include flex(column);
+            align-items: flex-start;
+            justify-content: flex-start;
+            .tag {
+              width: rpx(114);
+              height: rpx(34);
+              @include flex();
+              font-weight: 500;
+              color: #FFFFFF;
+              font-size: rpx(22);
+              line-height: rpx(22);
+              border-radius: rpx(4);
+              background: #2487FF;
+              margin-bottom: rpx(12);
+            }
+            .title {
+              height: rpx(88);
+              font-weight: 600;
+              color: #4E4C56;
+              font-size: rpx(30);
+              line-height: rpx(44);
+              letter-spacing: rpx(1);
+            }
+            .date {
+              font-weight: 500;
+              color: #D1D1D6;
+              font-size: rpx(22);
+              line-height: rpx(22);
+              margin-bottom: rpx(24);
+            }
+          }
+          .poster {
+            width: rpx(255);
+            height: rpx(188);
+            margin-left: rpx(24);
+            border-radius: rpx(12);
+          }
+        }
+      }
+    }
+    .join-now {
+      display: none;
+    }
+  }
+
+  @keyframes more {
+    0% { transform: translateY(-20%); }
+    25% { transform: translateY(0); }
+    50% { transform: translateY(20%); }
+    75% { transform: translateY(0); }
+    100% { transform: translateY(-20%); }
   }
 }

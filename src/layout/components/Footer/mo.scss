@@ -27,6 +27,61 @@
       line-height: rpx(44);
       letter-spacing: rpx(1);
     }
+    .van-overlay {
+      z-index: 999999;
+      @include flex();
+      .wrapper {
+        width: rpx(506);
+        height: rpx(634);
+        position: relative;
+        @include flex(column);
+        background: #FFFFFF;
+        border-radius: rpx(8);
+        justify-content: flex-start;
+        .close {
+          @include abs(rpx(32), rpx(444), rpx(32), rpx(32));
+        }
+        .code {
+          width: rpx(275);
+          height: rpx(275);
+          margin-top: rpx(92);
+          margin-bottom: rpx(24);
+        }
+        .t {
+          font-weight: 500;
+          color: #000000;
+          font-size: rpx(28);
+          line-height: rpx(40);
+          letter-spacing: rpx(1);
+          margin-bottom: rpx(16);
+        }
+        .st {
+          font-weight: 400;
+          color: #808080;
+          font-size: rpx(24);
+          line-height: rpx(33);
+          letter-spacing: rpx(1);
+          margin-bottom: rpx(36);
+        }
+        .save {
+          width: rpx(438);
+          height: rpx(83);
+          @include flex();
+          background: #2487FF;
+          border-radius: rpx(8);
+          font-size: rpx(28);
+          font-weight: 400;
+          color: #FFFFFF;
+          line-height: rpx(40);
+          letter-spacing: rpx(1);
+          img {
+            width: rpx(48);
+            height: rpx(48);
+            margin-right: rpx(8);
+          }
+        }
+      }
+    }
     .mo-footer {
       ::v-deep {
         .van-collapse {

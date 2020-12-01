@@ -1,8 +1,8 @@
 <template>
   <div class="talk duty-item">
     <div class="sec1 overflow">
-      <div class="sec-pc-t">老岳的1000场讲座</div>
-      <div class="sec-pc-st">点燃一朵朵感统智慧的花朵</div>
+      <div class="sec-t">老岳的1000场讲座</div>
+      <div class="sec-st">点燃一朵朵感统智慧的花朵</div>
       <div class="bg">
         <div class="title">活动背景</div>
         <div class="line" />

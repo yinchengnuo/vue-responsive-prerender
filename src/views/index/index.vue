@@ -2,6 +2,7 @@
   <div class="index">
     <div class="sec1">
       <video ref="video" src="https://dmhc-admin.oss-cn-beijing.aliyuncs.com/website/366587712495573.6.index.mp4" loop muted />
+
       <div class="news">
         <span @click="$router.push('/media')">NEWS</span>
         <div class="center">
@@ -17,6 +18,9 @@
         <img src="@/assets/index/mouse.png">
         <span>鼠标滚动查看</span>
       </div>
+
+      <img class="mo-center" src="@/assets/index/mo-icon.png">
+      <img class="mo-more" src="@/assets/index/mo-more.png">
     </div>
     <div class="sec2">
       <div class="content">
@@ -34,16 +38,36 @@
               :key="index"
               class="page-item"
               :class="{ active: index === sec2.active }"
-              @mouseenter="sec2.active = index; $refs.sec2Swiper.$emit('slideTo', index);"
+              @mouseenter="$refs.sec2Swiper.$emit('slideTo', index); sec2.active = index;"
             >{{ item.name }}</div>
           </div>
         </div>
         <img src="@/assets/index/ytt.png" class="right">
       </div>
+      <div class="mo-content">
+        <img src="@/assets/index/mo-ytt.png" class="right">
+        <slider ref="sec2SwiperMo" class="swiper" :options="{ ...sec2.options, freeze: false, effect: 'slide', loop: true }" @slide="({ currentPage }) => sec2.active = currentPage">
+          <slideritem v-for="(item, index) in sec2.data" :key="index">
+            <div class="title sec-t">{{ item.title }}</div>
+            <div class="stitle sec-st">{{ item.stitle }}</div>
+            <div class="cont">{{ item.cont }}</div>
+          </slideritem>
+        </slider>
+        <div class="page-bar">
+          <div
+            v-for="(item, index) in sec2.data"
+            :key="index"
+            class="page-item"
+            :class="{ active: index === sec2.active }"
+            @click="$refs.sec2SwiperMo.$emit('slideTo', index); sec2.active = index;"
+          >{{ item.name }}</div>
+        </div>
+      </div>
     </div>
+    <div class="split" />
     <div class="sec3 overflow">
-      <div class="sec-pc-t">产品与服务 赋能中国早幼教</div>
-      <div class="sec-pc-st">结合中国传统家庭教育习惯，推出符合中国国情感统教育体系</div>
+      <div class="sec-t">产品与服务 赋能中国早幼教</div>
+      <div class="sec-st">结合中国传统家庭教育习惯，推出符合中国国情感统教育体系</div>
       <el-tabs v-model="sec3.active" @tab-click="({ index }) => $refs.sec3Swiper.$emit('slideTo', index - 1)">
         <el-tab-pane label="启语慧声（建设中)" name="-1" disabled />
         <el-tab-pane v-for="(item, index) in sec3.data" :key="index" :label="item.name" :name="index.toString()" />
@@ -66,10 +90,9 @@
               </div>
               <div class="bot">
                 <div class="t">服务范围：</div>
-                <router-link class="router-link" to="/">线上儿童感统测评 》</router-link>
-                <router-link class="router-link" to="/">线上儿童感统测评 》</router-link>
-                <router-link class="router-link" to="/">线上儿童感统测评 》</router-link>
-                <router-link class="router-link" to="/">线上儿童感统测评 》</router-link>
+                <router-link class="router-link" to="/service/lyjgt">线上儿童感统测评 》</router-link>
+                <router-link class="router-link" to="/service/lyjgt">线上儿童感统训练 》</router-link>
+                <router-link class="router-link" to="/service/lyjgt">感统商学院 》</router-link>
               </div>
             </div>
             <img class="right" src="@/assets/index/sec3-banner1.png">
@@ -90,17 +113,63 @@
               </div>
               <div class="bot">
                 <div class="t">服务范围：</div>
-                <router-link class="router-link" to="/">线上儿童感统测评 》</router-link>
-                <router-link class="router-link" to="/">线上儿童感统测评 》</router-link>
-                <router-link class="router-link" to="/">线上儿童感统测评 》</router-link>
-                <router-link class="router-link" to="/">线上儿童感统测评 》</router-link>
+                <router-link class="router-link" to="/service/dmhc">线下儿童感统测评 》</router-link>
+                <router-link class="router-link" to="/service/dmhc">线下儿童感统训练 》</router-link>
               </div>
             </div>
             <img class="right" src="@/assets/index/sec3-banner2.png">
           </slideritem>
         </slider>
       </div>
+      <div class="contentMo">
+        <slider ref="sec3SwiperMo" class="swiper" :options="{ ...sec3.options, pagination: true, loop: true, centeredSlides: true }" @slide="({ currentPage }) => sec3.active = currentPage.toString()">
+          <slideritem>
+            <img class="logo" src="@/assets/index/sec3-logo1.png">
+            <img class="top" src="@/assets/index/sec3-banner1.png">
+            <div class="n">老岳讲感统</div>
+            <div class="line">1</div>
+            <div class="t">线上多平台感统知识传播与训练</div>
+            <div class="links">
+              <span>线上儿童感统测评</span>
+              <span>线上儿童感统训练</span>
+              <span>感统商学院</span>
+            </div>
+            <div class="bot">
+              <div class="i">
+                <div class="num"><span>469</span>场</div>
+                <div class="name">全国感统讲座</div>
+              </div>
+              <div class="i">
+                <div class="num"><span>10</span>年</div>
+                <div class="name">游学专注感统教育研发</div>
+              </div>
+            </div>
+          </slideritem>
+          <slideritem>
+            <img class="logo" src="@/assets/index/sec3-logo2.png">
+            <img class="top" src="@/assets/index/sec3-banner2.png">
+            <div class="n">动漫火车感统</div>
+            <div class="line">1</div>
+            <div class="t">线下儿童感统训练专业机构</div>
+            <div class="links">
+              <span>线下儿童感统测评</span>
+              <span>线下儿童感统训练</span>
+            </div>
+            <div class="bot">
+              <div class="i">
+                <div class="num"><span>100</span>名</div>
+                <div class="name">专业感统训练师</div>
+              </div>
+              <div class="i">
+                <div class="num"><span>20</span>个</div>
+                <div class="name">国际标准感统训练室</div>
+              </div>
+            </div>
+          </slideritem>
+        </slider>
+      </div>
     </div>
+    <div class="split" />
     <div class="sec4 overflow">
       <header>
         <div class="left">
@@ -115,7 +184,7 @@
       <div class="content">
         <div class="index">0{{ +sec4.active + 1 }}</div>
         <slider ref="sec4Swiper" class="swiper" :options="sec4.options" @slide="({ currentPage }) => sec4.active = (currentPage < sec4.data.length ? currentPage.toString() : sec4.data.length - 1)">
-          <slideritem v-for="(item, index) in sec4.data" :key="index">
+          <slideritem v-for="(item, index) in sec4.data" :key="index" @tap="$router.push(item.to)">
             <div class="inner" @mousemove="e => { sec4.top = e.offsetY; sec4.left = e.offsetX }">
               <div class="bg" />
               <div class="text">{{ item.text }}</div>
@@ -125,26 +194,44 @@
           </slideritem>
         </slider>
       </div>
+      <div class="contentMo overflow">
+        <div class="sec-t">老岳讲感统 我们在行动</div>
+        <div class="sec-st">结合中国传统家庭教育习惯，推出符合中国国情感统教育体系</div>
+        <slider ref="sec4Swiper" class="swiper" :options="sec4.options">
+          <slideritem v-for="(item, index) in sec4.data" :key="index" @tap="$router.push(item.to)">
+            <img :src="item.banner">
+            <div class="text">{{ item.text }}</div>
+          </slideritem>
+        </slider>
+      </div>
     </div>
+    <div class="split" />
     <div class="sec5 overflow">
-      <div class="sec-pc-t">公司新闻 为幼儿大爱前行</div>
-      <div class="sec-pc-st">“感统训练”成为越来越多教育领域投资者青睐的蓝海</div>
+      <div class="sec-t">公司新闻 为幼儿大爱前行</div>
+      <div class="sec-st">“感统训练”成为越来越多教育领域投资者青睐的蓝海</div>
       <div class="content">
         <div class="poster">
-          <slider ref="sec5Swiper" class="swiper" :options="sec5.options">
-            <slideritem v-for="(item, index) in newsList" :key="index">
-              <img class="right" :src="item.pic">
-            </slideritem>
-          </slider>
+          <img v-for="(item, index) in newsList" :key="index" :src="item.pic" :class="{ active: sec5.active === index }">
         </div>
         <div class="list">
-          <div v-for="(item, index) in newsList" :key="index" class="item" @mouseenter="$refs.sec5Swiper.$emit('slideTo', index)">
+          <div v-for="(item, index) in newsList" :key="index" class="item" @mouseenter="sec5.active = index">
             <div class="date"><span>{{ (new Date(item.create_time)).getDate() }}</span> /{{ (new Date(item.create_time)).getMonth() + 1 }}</div>
-            <div class="title" @click="window.open(item.url)">{{ item.title }}</div>
+            <div class="title" @click="$router.push({ name: 'MediaArticle', params: { id: item.id }})">{{ item.title }}</div>
           </div>
         </div>
       </div>
+      <div class="contentMo">
+        <div v-for="(item, index) in newsList" :key="index" class="item">
+          <div class="left">
+            <div class="tag">公司动态</div>
+            <div class="title" @click="$router.push({ name: 'MediaArticle', params: { id: item.id }})">{{ item.title | slice(26) }}</div>
+            <div class="date">{{ (new Date(item.create_time)).getMonth() + 1 }}月{{ (new Date(item.create_time)).getDate() }}，{{ (new Date(item.create_time)).getFullYear() }}</div>
+          </div>
+          <img :src="item.pic" class="poster">
+        </div>
+      </div>
     </div>
+    <div class="split" />
     <div class="join-now">
       <img class="bg" src="@/assets/index/footer.png">
       <div class="title">与老岳一起，与感统教育同行，全国招募合作伙伴</div>
@@ -194,9 +281,9 @@ export default {
           centeredSlides: true
         },
         data: [
-          { text: '《爱的守望》公益行第三季 ', banner: require('@/assets/index/sec4-banner1.png') },
-          { text: '山东榆次家长讲座 ', banner: require('@/assets/index/sec4-banner2.png') },
-          { text: '《精英感统园长特训营》第五期 ', banner: require('@/assets/index/sec4-banner3.png') }
+          { text: '《爱的守望》公益行第三季 ', banner: require('@/assets/index/sec4-banner1.png'), to: '/duty/love' },
+          { text: '山东榆次家长讲座 ', banner: require('@/assets/index/sec4-banner2.png'), to: '/duty/talk' },
+          { text: '《精英感统园长特训营》第五期 ', banner: require('@/assets/index/sec4-banner3.png'), to: '/duty/tour' }
         ]
       },
       sec5: {
@@ -213,7 +300,7 @@ export default {
     this.$refs.video.play()
   },
   mounted() {
-    api_index({ page: 1, limit: 4 }).then(res => {
+    api_index({ newsTypeId: 1, page: 1, limit: 4 }).then(res => {
       this.newsList = res.data.data.list
     })
   }

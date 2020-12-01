@@ -42,8 +42,8 @@
     <div class="mo-footer">
       <div class="focus">
         <span>关注我们</span>
-        <img class="icon" src="@/assets/layout/douyin.png">
-        <img class="icon" src="@/assets/layout/weixin.png">
+        <img class="icon" src="@/assets/layout/douyin.png" @click="type = 1; show = true">
+        <img class="icon" src="@/assets/layout/weixin.png" @click="type = 2; show = true">
       </div>
       <van-collapse v-model="activeName" accordion>
         <van-collapse-item title="公司简介" name="公司简介">
@@ -60,12 +60,26 @@
         </van-collapse-item>
         <van-collapse-item title="社会责任" name="社会责任">
           <router-link class="router-link" to="/duty/love">《爱的守望》公益行</router-link>
-          <router-link class="router-link" to="/duty/talk">家长讲座</router-link>
-          <router-link class="router-link" to="/duty/tour">全国巡讲</router-link>
+          <router-link class="router-link" to="/duty/talk">老岳的1000场讲座</router-link>
+          <router-link class="router-link" to="/duty/tour">老岳的三尺讲台</router-link>
         </van-collapse-item>
       </van-collapse>
       <div class="mo-bottom">豫ICP备16027150号-1   I   Copyright © 2008-2020 河南老岳讲感统教育科技有限公司 版权所有</div>
     </div>
+    <van-overlay :show="show" @click="show = false">
+      <div class="wrapper" @click.stop>
+        <img class="close" src="@/assets/layout/mo-close.png" @click="show = false">
+        <img v-if="type === 1" class="code" src="@/assets/layout/dy-code.png">
+        <img v-if="type === 2" class="code" src="@/assets/layout/wx-code.png">
+        <span v-if="type === 1" class="t">关注老岳官方微信号 </span>
+        <span v-if="type === 2" class="t">关注老岳官方抖音号 </span>
+        <span class="st">专家为您答疑，惊喜大礼活动！</span>
+        <span class="save" @click="$download(type === 1 ? require('@/assets/layout/dy-code.png') : require('@/assets/layout/wx-code.png'))">
+          <img src="@/assets/layout/mo-down.png">
+          <span>保存至相册</span>
+        </span>
+      </div>
+    </van-overlay>
   </div>
 </template>
 
@@ -74,6 +88,8 @@ export default {
   name: 'Footer',
   data() {
     return {
+      type: 0,
+      show: false,
       activeName: '',
       nav: [
         {
@@ -96,7 +112,7 @@ export default {
           name: '社会责任',
           route: [
             { to: '/duty/love', name: '《爱的守望》公益行' },
-            { to: '/duty/talk', name: '家长讲座' }
+            { to: '/duty/talk', name: '老岳的1000场讲座' }
           ]
         }
       ]

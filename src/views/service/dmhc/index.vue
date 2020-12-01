@@ -12,7 +12,7 @@
       </div>
     </div>
     <div class="sec2 overflow">
-      <div class="sec-pc-t">来动漫火车学感统，提升孩子7大能力</div>
+      <div class="sec-t">来动漫火车学感统，提升孩子7大能力</div>
       <div class="content">
         <div class="left">
           <div><img src="@/assets/service/dmhc/1.png">注意力</div>
@@ -29,7 +29,7 @@
       </div>
     </div>
     <div class="sec3 overflow">
-      <div class="sec-pc-t">六大核心优势</div>
+      <div class="sec-t">六大核心优势</div>
       <div class="content">
         <div class="item">
           <img src="@/assets/service/dmhc/11.png">

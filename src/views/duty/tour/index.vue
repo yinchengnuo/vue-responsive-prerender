@@ -1,8 +1,8 @@
 <template>
   <div class="tour duty-item">
     <div class="sec1 overflow">
-      <div class="sec-pc-t">老岳的三尺讲台</div>
-      <div class="sec-pc-st">为中国感统教育事业培养后备力量</div>
+      <div class="sec-t">老岳的三尺讲台</div>
+      <div class="sec-st">为中国感统教育事业培养后备力量</div>
       <div class="bg">
         <div class="title">活动背景</div>
         <div class="line" />

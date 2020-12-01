@@ -6,7 +6,7 @@
       <img v-if="$route.path === '/about/honor'" src="@/assets/about/3.png" class="banner">
       <img v-if="$route.path === '/about/culture'" src="@/assets/about/4.jpg" class="banner">
       <img v-if="$route.path === '/about/team'" src="@/assets/about/5.png" class="banner">
-      <div class="navbar-wrapper" :class="{ fixed: this.$store.state.top >= 600 }">
+      <div class="navbar-wrapper" :class="{ fixed: this.$store.state.top >= (document.body.offsetWidth >= 1200 ? 600 : (document.body.offsetWidth / 750 * 375)) }">
         <div class="navbar">
           <router-link class="router-link" to="/about/profile">公司概况</router-link>
           <router-link class="router-link" to="/about/history">发展历程</router-link>
@@ -29,6 +29,9 @@ export default {
     return {
 
     }
+  },
+  mounted() {
+    console.log(document.body.offsetWidth / 750 * 375)
   }
 }
 </script>

@@ -1,5 +1,67 @@
 @media screen and (max-width: 1200px) {
   .culture {
-    height: 100%;
+    .sec1 {
+      .content {
+        display: none;
+      }
+      .contentMo {
+        .cont {
+          width: rpx(686);
+          margin: 0 auto rpx(32);
+          font-size: rpx(24);
+          font-weight: 400;
+          color: #606060;
+          line-height: rpx(42);
+          letter-spacing: rpx(1);
+        }
+        img {
+          width: rpx(686);
+          display: block;
+          margin: 0 auto rpx(32);
+        }
+      }
+    }
+    .sec2 {
+      .content {
+        display: none;
+      }
+      .contentMo {
+        background-image: url("../../../assets/about/culture//bg1.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% 100%;
+        height: rpx(619);
+        @include flex(column);
+        justify-content: flex-start;
+        .item {
+          @include flex(column);
+          margin-bottom: rpx(32);
+          &:first-child {
+            margin-top: rpx(12);
+          }
+          p {
+            @include flex(); 
+            margin-bottom: rpx(16);
+          }
+          img {
+            width: rpx(40);
+            height: rpx(40);
+            margin-right: rpx(8);
+          }
+          span {
+            font-size: rpx(24);
+            font-weight: 600;
+            color: #2487FF;
+            line-height: rpx(33);
+          }
+          div {
+            font-size: rpx(24);
+            font-weight: 400;
+            color: #8E99A9;
+            line-height: rpx(33);
+          }
+        }
+      }
+    }
   }
 }

@@ -26,26 +26,6 @@ div:focus {
   overflow: hidden;
 }
 
-.sec-pc-t {
-  font-size: 28px;
-  margin-top: 66px;
-  font-weight: 600;
-  color: #000000;
-  line-height: 40px;
-  text-align: center;
-  margin-bottom: 16px;
-}
-
-.sec-pc-st {
-  font-size: 16px;
-  font-weight: 500;
-  color: #878787;
-  line-height: 22px;
-  text-align: center;
-  margin-bottom: 44px;
-  letter-spacing: 1px;
-}
-
 .flex {
   @include flex();
 }
@@ -62,7 +42,55 @@ div:focus {
 	@return 100vw / 750 * $rpx;
 }
 
+@media screen and (max-width: 1200px) {
+  .split {
+    height: rpx(10);
+    background: #F7F8FA;
+  }
+  .sec-t {
+    font-weight: 600;
+    color: #333333;
+    font-size: rpx(28);
+    text-align: center;
+    margin-top: rpx(48);
+    line-height: rpx(40);
+    margin-bottom: rpx(16);
+  }
+  
+  .sec-st {
+    font-weight: 400;
+    color: #878787;
+    text-align: center;
+    font-size: rpx(20);
+    line-height: rpx(28);
+    letter-spacing: rpx(1);
+    margin-bottom: rpx(32);
+  }
+}
+
 @media screen and (min-width: 1200px) {
+  .split {
+    display: none;;
+  }
+  .sec-t {
+    font-size: 28px;
+    margin-top: 66px;
+    font-weight: 600;
+    color: #000000;
+    line-height: 40px;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  
+  .sec-st {
+    font-size: 16px;
+    font-weight: 500;
+    color: #878787;
+    line-height: 22px;
+    text-align: center;
+    margin-bottom: 44px;
+    letter-spacing: 1px;
+  }
   .join-now {
     z-index: 1;
     height: 317px;
