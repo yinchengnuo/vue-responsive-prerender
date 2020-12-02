@@ -51,7 +51,7 @@
           <router-link class="router-link" to="/about/history">发展历程</router-link>
           <router-link class="router-link" to="/about/honor">资质荣誉</router-link>
           <router-link class="router-link" to="/about/culture">品牌文化</router-link>
-          <router-link class="router-link" to="/about/team">管理团队</router-link>
+          <router-link class="router-link" to="/about/team">师资团队</router-link>
         </van-collapse-item>
         <van-collapse-item title="产品与服务" name="产品与服务">
           <router-link class="router-link" to="/service/lyjgt">老岳讲感统</router-link>
@@ -96,7 +96,7 @@ export default {
           name: '关于我们',
           route: [
             { name: '公司简介', to: '/about/profile' },
-            { name: '管理团队', to: '/about/team' },
+            { name: '师资团队', to: '/about/team' },
             { name: '加盟合作', to: '/join' }
           ]
         },

@@ -74,7 +74,7 @@
         }
         .content {
           z-index: 1;
-          height: 555px;
+          height: 455px;
           position: relative;
           .text {
             width: 1065px;
@@ -84,9 +84,13 @@
             color: #565E61;
             line-height: 38px;
           }
-          img {
+          .data {
             z-index: -1;
-            @include abs(0, 0, 100%, 100%);
+            @include abs(-100px, 0, 100%, 100%);
+          }
+          .dataBG {
+            z-index: -1;
+            @include abs(345px, 0, 100%, 109px);
           }
         }
       }

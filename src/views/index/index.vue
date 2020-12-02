@@ -25,20 +25,20 @@
     <div class="sec2">
       <div class="content">
         <div class="left">
-          <slider ref="sec2Swiper" class="swiper" :options="sec2.options" @slide="({ currentPage }) => sec2.active = currentPage">
-            <slideritem v-for="(item, index) in sec2.data" :key="index">
+          <div class="items">
+            <div v-for="(item, index) in sec2.data" :key="index" class="item" :class="{ active: sec2.active === index }">
               <div class="title">{{ item.title }}</div>
               <div class="stitle">{{ item.stitle }}</div>
               <div class="cont">{{ item.cont }}</div>
-            </slideritem>
-          </slider>
-          <div class="page-bar" @mouseenter="$refs.sec2Swiper.$emit('autoplayStop')" @mouseleave="$refs.sec2Swiper.$emit('autoplayStart', 5000)">
+            </div>
+          </div>
+          <div class="page-bar" @mouseenter="window.clearInterval(sec2.timer)" @mouseleave="setInterval">
             <div
               v-for="(item, index) in sec2.data"
               :key="index"
               class="page-item"
               :class="{ active: index === sec2.active }"
-              @mouseenter="$refs.sec2Swiper.$emit('slideTo', index); sec2.active = index;"
+              @mouseenter="sec2.active = index"
             >{{ item.name }}</div>
           </div>
         </div>
@@ -215,7 +215,7 @@
         </div>
         <div class="list">
           <div v-for="(item, index) in newsList" :key="index" class="item" @mouseenter="sec5.active = index">
-            <div class="date"><span>{{ (new Date(item.create_time)).getDate() }}</span> /{{ (new Date(item.create_time)).getMonth() + 1 }}</div>
+            <div class="date"><span>{{ ((new Date(item.create_time)).getDate()).toString().padStart(2, '0') }}</span> /{{ ((new Date(item.create_time)).getMonth() + 1).toString().padStart(2, '0') }}</div>
             <div class="title" @click="$router.push({ name: 'MediaArticle', params: { id: item.id }})">{{ item.title }}</div>
           </div>
         </div>
@@ -225,7 +225,7 @@
           <div class="left">
             <div class="tag">公司动态</div>
             <div class="title" @click="$router.push({ name: 'MediaArticle', params: { id: item.id }})">{{ item.title | slice(26) }}</div>
-            <div class="date">{{ (new Date(item.create_time)).getMonth() + 1 }}月{{ (new Date(item.create_time)).getDate() }}，{{ (new Date(item.create_time)).getFullYear() }}</div>
+            <div class="date">{{ ((new Date(item.create_time)).getMonth() + 1).toString().padStart(2, '0') }}月{{ ((new Date(item.create_time)).getDate()).toString().padStart(2, '0') }}，{{ (new Date(item.create_time)).getFullYear() }}</div>
           </div>
           <img :src="item.pic" class="poster">
         </div>
@@ -248,13 +248,8 @@ export default {
     return {
       newsList: [],
       sec2: {
+        timer: null,
         active: 0,
-        options: {
-          freeze: true,
-          effect: 'fade',
-          autoplay: 5000,
-          pagination: false
-        },
         data: [
           { name: '过去', title: '过去·老岳 ', stitle: '十余年深耕感统教育一线，铸就行业王者风范', cont: '自2008年来，老岳讲感统和动漫火车始终坚持在儿童感统训练一线，每年帮助1000多名儿童摆脱感统失调困扰，并总结研发出可作为行业执行标准的感统训练体系。同时，自主创办的老岳讲感统自媒体平台，无论感统训练课程数量、会员人数、媒体粉丝人数，均达到全国第一的成绩。在中国，提起感统训练，就离不开老岳讲感统！' },
           { name: '现在', title: '现在·老岳 ', stitle: '三驾马车并驾齐驱推动感统行业标准', cont: '三驾马车并驾齐驱推动感统行业标准动漫火车儿童感统训练中心，作为全国感统教育行业的标准旗舰店，迎来全国家长、同行的一致认可；老岳讲感统商学院，开设有针对感统机构不同岗位的学习培训课程，已为行业输送人才超6000余人；老岳讲感统自媒体平台，为家长和儿童提供可在家庭学习训练的不同训练课程十余种，累计粉丝超400万人，在训会员超过50万组家庭。覆盖了线上线下和行业培训的三驾马车，正在推动中国感统教育事业的标准化推广。' },
@@ -281,9 +276,9 @@ export default {
           centeredSlides: true
         },
         data: [
-          { text: '《爱的守望》公益行第三季 ', banner: require('@/assets/index/sec4-banner1.png'), to: '/duty/love' },
-          { text: '山东榆次家长讲座 ', banner: require('@/assets/index/sec4-banner2.png'), to: '/duty/talk' },
-          { text: '《精英感统园长特训营》第五期 ', banner: require('@/assets/index/sec4-banner3.png'), to: '/duty/tour' }
+          { text: '《爱的守望》公益行 ', banner: require('@/assets/index/sec4-banner1.png'), to: '/duty/love' },
+          { text: '老岳的1000场讲座 ', banner: require('@/assets/index/sec4-banner2.png'), to: '/duty/talk' },
+          { text: '老岳的三尺讲台 ', banner: require('@/assets/index/sec4-banner3.png'), to: '/duty/tour' }
         ]
       },
       sec5: {
@@ -300,9 +295,21 @@ export default {
     this.$refs.video.play()
   },
   mounted() {
+    this.setInterval()
     api_index({ newsTypeId: 1, page: 1, limit: 4 }).then(res => {
       this.newsList = res.data.data.list
     })
+  },
+  methods: {
+    setInterval() {
+      this.sec2.timer = setInterval(() => {
+        if (this.sec2.active === 2) {
+          this.sec2.active = 0
+        } else {
+          this.sec2.active++
+        }
+      }, 3333)
+    }
   }
 }
 </script>

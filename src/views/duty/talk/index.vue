@@ -14,7 +14,7 @@
           <div class="line" />
           <div class="text">截止2020年末，讲座已经进行了530多场，按照每场平均600人到场观看聆听，老岳已经为近32万名家长讲述感觉统合，最少影响了16万组家庭正视感觉统合，接受感觉统合。在讲座中，岳老师和全国不同地方的家长们亲切的打着招呼，近距离的为大家讲述着儿童大脑工作的逻辑和发育原理，讲述着感觉统合的运行机制，也为大家分享了因为哪些不正确的带养方式而造成的儿童感统失调，特别是讲解到不同感统失调的表现时，家长们纷纷表示找到了自己孩子行为表现的根源，再结合岳老师所解析的造成感统失调表现时，家长恍然大悟是自己的错误带养给孩子的生长发育带来了极大的困扰，也表示要继续加强对感觉统合的学习，以及要和孩子一起开展感统训练。</div>
         </div>
-        <img src="@/assets/duty/love/1.png">
+        <img src="@/assets/duty/talk/1.png">
       </div>
     </div>
     <div class="sec2 overflow">
@@ -61,7 +61,8 @@
             </slideritem>
           </slider>
         </div>
-        <div class="right" @mouseenter="$refs.swiper2.$emit('autoplayStop')" @mouseleave="$refs.swiper2.$emit('autoplayStart', 5000)">
+        <!-- <div class="right" @mouseenter="$refs.swiper2.$emit('autoplayStop')" @mouseleave="$refs.swiper2.$emit('autoplayStart', 3000)"> -->
+        <div class="right">
           <slider ref="swiper2" class="swiper" :options="swiper2" @slide="({ currentPage }) => $refs.swiper1.$emit('slideTo', currentPage)">
             <slideritem v-for="(item, index) in list" :key="index">
               <div class="item">
@@ -88,7 +89,7 @@ export default {
       },
       swiper2: {
         loop: true,
-        autoplay: 5000,
+        autoplay: 3000,
         loopedSlides: 8,
         pagination: false,
         centeredSlides: true,
@@ -97,12 +98,10 @@ export default {
         thresholdTime: '666666'
       },
       list: [
-        { data: '2020年10月', text: '此处为活动事件，活动事件文本最大承受两行，为滚动播放。左图随图变动。此处为活动事件，活动事件文本最大承受两行，为滚动播放。左图随图变动。此处为活动事件，活动事件文本最大承受两行，为滚动播放。左图随图变动。 ', img: require('@/assets/duty/love/1.png') },
-        { data: '2020年10月', text: '此处为活动事件，活动事件文本最大承受两行，为滚动播放。左图随图变动。此处为活动事件，活动事件文本最大承受两行，为滚动播放。左图随图变动。此处为活动事件，活动事件文本最大承受两行，为滚动播放。左图随图变动。 ', img: require('@/assets/duty/love/2.png') },
-        { data: '2020年10月', text: '此处为活动事件，活动事件文本最大承受两行，为滚动播放。左图随图变动。此处为活动事件，活动事件文本最大承受两行，为滚动播放。左图随图变动。此处为活动事件，活动事件文本最大承受两行，为滚动播放。左图随图变动。 ', img: require('@/assets/duty/love/1.png') },
-        { data: '2020年10月', text: '此处为活动事件，活动事件文本最大承受两行，为滚动播放。左图随图变动。此处为活动事件，活动事件文本最大承受两行，为滚动播放。左图随图变动。此处为活动事件，活动事件文本最大承受两行，为滚动播放。左图随图变动。 ', img: require('@/assets/duty/love/2.png') },
-        { data: '2020年10月', text: '此处为活动事件，活动事件文本最大承受两行，为滚动播放。左图随图变动。此处为活动事件，活动事件文本最大承受两行，为滚动播放。左图随图变动。此处为活动事件，活动事件文本最大承受两行，为滚动播放。左图随图变动。 ', img: require('@/assets/duty/love/1.png') },
-        { data: '2020年10月', text: '此处为活动事件，活动事件文本最大承受两行，为滚动播放。左图随图变动。此处为活动事件，活动事件文本最大承受两行，为滚动播放。左图随图变动。此处为活动事件，活动事件文本最大承受两行，为滚动播放。左图随图变动。 ', img: require('@/assets/duty/love/2.png') }
+        { data: '2020年9月', text: '郑州动漫火车 老岳举行第526期家长讲座 ', img: require('@/assets/duty/talk/1.png') },
+        { data: '2020年10月', text: '山西动漫火车 老岳举行第531场家长讲座 ', img: require('@/assets/duty/talk/2.png') },
+        { data: '2020年10月', text: '合肥艾米乐贝 老岳开展第532场家长讲座 ', img: require('@/assets/duty/talk/1.png') },
+        { data: '2020年10月', text: '杭州花儿朵朵 老岳举行第533场家长讲座 ', img: require('@/assets/duty/talk/2.png') }
       ]
     }
   }

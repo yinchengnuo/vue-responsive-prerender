@@ -60,6 +60,14 @@ export default {
       },
       list: null,
       list1: [
+        { img: require('@/assets/about/honor/111.png'), text: '郑州幼专特教专业人才实训基地' },
+        { img: require('@/assets/about/honor/222.png'), text: '2018年度极赞口碑奖' },
+        { img: require('@/assets/about/honor/333.png'), text: '北京学前教育协会教育创新贡献奖' },
+        { img: require('@/assets/about/honor/444.png'), text: '北京学前教育协会感觉统合专业委员会' },
+        { img: require('@/assets/about/honor/555.png'), text: '2018中国学前教育百佳机构' },
+        { img: require('@/assets/about/honor/666.png'), text: '北京学前教育协会常务副会长单位' }
+      ],
+      list2: [
         { img: require('@/assets/about/honor/1.png'), text: '年度新教育探索奖' },
         { img: require('@/assets/about/honor/2.png'), text: '2019年度影响力儿童教育人物' },
         { img: require('@/assets/about/honor/3.png'), text: '2018全国公益早教传播大使' },
@@ -72,14 +80,6 @@ export default {
         { img: require('@/assets/about/honor/10.png'), text: '北京学前教育协会常务副会长' },
         { img: require('@/assets/about/honor/11.png'), text: '教育扶贫捐赠' },
         { img: require('@/assets/about/honor/12.png'), text: '北京学前教育协会感觉统合专业委员会主任' }
-      ],
-      list2: [
-        { img: require('@/assets/about/honor/111.png'), text: '郑州幼专特教专业人才实训基地' },
-        { img: require('@/assets/about/honor/222.png'), text: '2018年度极赞口碑奖' },
-        { img: require('@/assets/about/honor/333.png'), text: '北京学前教育协会教育创新贡献奖' },
-        { img: require('@/assets/about/honor/444.png'), text: '北京学前教育协会感觉统合专业委员会' },
-        { img: require('@/assets/about/honor/555.png'), text: '2018中国学前教育百佳机构' },
-        { img: require('@/assets/about/honor/666.png'), text: '北京学前教育协会常务副会长单位' }
       ]
     }
   },

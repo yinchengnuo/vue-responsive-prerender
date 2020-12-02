@@ -12,7 +12,7 @@
           <router-link class="router-link" to="/about/history">发展历程</router-link>
           <router-link class="router-link" to="/about/honor">资质荣誉</router-link>
           <router-link class="router-link" to="/about/culture">品牌文化</router-link>
-          <router-link class="router-link" to="/about/team">管理团队</router-link>
+          <router-link class="router-link" to="/about/team">师资团队</router-link>
         </div>
       </div>
     </div>

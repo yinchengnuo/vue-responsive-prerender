@@ -14,7 +14,7 @@
           <div class="line" />
           <div class="text">从感觉统合认证研修班、高级班、实战班、测评班中走出的专业感统老师已经有近万人的规模，他们回到各自的城市，在不同的机构中为各地的家庭开展来自老岳的感觉统合训练。然而老岳的目标远不止于此，2019下半年度，老岳来到郑州幼儿师范专科院校，正式开始了他的三尺讲台生涯，从第一学期的几十名学生，到后来每逢开课就是整个阶梯教室爆满，岳老师在新的阵地上继续他推动感统教育事业的征程。</div>
         </div>
-        <img src="@/assets/duty/love/1.png">
+        <img src="@/assets/duty/tour/1.png">
       </div>
     </div>
     <div class="sec2 overflow">
@@ -61,7 +61,8 @@
             </slideritem>
           </slider>
         </div>
-        <div class="right" @mouseenter="$refs.swiper2.$emit('autoplayStop')" @mouseleave="$refs.swiper2.$emit('autoplayStart', 5000)">
+        <!-- <div class="right" @mouseenter="$refs.swiper2.$emit('autoplayStop')" @mouseleave="$refs.swiper2.$emit('autoplayStart', 3000)"> -->
+        <div class="right">
           <slider ref="swiper2" class="swiper" :options="swiper2" @slide="({ currentPage }) => $refs.swiper1.$emit('slideTo', currentPage)">
             <slideritem v-for="(item, index) in list" :key="index">
               <div class="item">
@@ -88,7 +89,7 @@ export default {
       },
       swiper2: {
         loop: true,
-        autoplay: 5000,
+        autoplay: 3000,
         loopedSlides: 8,
         pagination: false,
         centeredSlides: true,
@@ -97,12 +98,10 @@ export default {
         thresholdTime: '666666'
       },
       list: [
-        { data: '2020年10月', text: '此处为活动事件，活动事件文本最大承受两行，为滚动播放。左图随图变动。此处为活动事件，活动事件文本最大承受两行，为滚动播放。左图随图变动。此处为活动事件，活动事件文本最大承受两行，为滚动播放。左图随图变动。 ', img: require('@/assets/duty/love/1.png') },
-        { data: '2020年10月', text: '此处为活动事件，活动事件文本最大承受两行，为滚动播放。左图随图变动。此处为活动事件，活动事件文本最大承受两行，为滚动播放。左图随图变动。此处为活动事件，活动事件文本最大承受两行，为滚动播放。左图随图变动。 ', img: require('@/assets/duty/love/2.png') },
-        { data: '2020年10月', text: '此处为活动事件，活动事件文本最大承受两行，为滚动播放。左图随图变动。此处为活动事件，活动事件文本最大承受两行，为滚动播放。左图随图变动。此处为活动事件，活动事件文本最大承受两行，为滚动播放。左图随图变动。 ', img: require('@/assets/duty/love/1.png') },
-        { data: '2020年10月', text: '此处为活动事件，活动事件文本最大承受两行，为滚动播放。左图随图变动。此处为活动事件，活动事件文本最大承受两行，为滚动播放。左图随图变动。此处为活动事件，活动事件文本最大承受两行，为滚动播放。左图随图变动。 ', img: require('@/assets/duty/love/2.png') },
-        { data: '2020年10月', text: '此处为活动事件，活动事件文本最大承受两行，为滚动播放。左图随图变动。此处为活动事件，活动事件文本最大承受两行，为滚动播放。左图随图变动。此处为活动事件，活动事件文本最大承受两行，为滚动播放。左图随图变动。 ', img: require('@/assets/duty/love/1.png') },
-        { data: '2020年10月', text: '此处为活动事件，活动事件文本最大承受两行，为滚动播放。左图随图变动。此处为活动事件，活动事件文本最大承受两行，为滚动播放。左图随图变动。此处为活动事件，活动事件文本最大承受两行，为滚动播放。左图随图变动。 ', img: require('@/assets/duty/love/2.png') }
+        { data: '2019年年6月', text: ' 老岳来到了广州 举办第了9期认证研修班 ', img: require('@/assets/duty/tour/1.png') },
+        { data: '2020年6月', text: ' 老岳举办了第21期高级研修班 ', img: require('@/assets/duty/tour/2.png') },
+        { data: '2020年7月', text: ' 老岳举办了第6期顾问密训营 ', img: require('@/assets/duty/tour/3.png') },
+        { data: '2020年8月', text: ' 第15期认证研修班 ', img: require('@/assets/duty/tour/4.png') }
       ]
     }
   }

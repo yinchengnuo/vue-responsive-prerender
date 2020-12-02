@@ -61,7 +61,8 @@
             </slideritem>
           </slider>
         </div>
-        <div class="right" @mouseenter="$refs.swiper2.$emit('autoplayStop')" @mouseleave="$refs.swiper2.$emit('autoplayStart', 5000)">
+        <!-- <div class="right" @mouseenter="$refs.swiper2.$emit('autoplayStop')" @mouseleave="$refs.swiper2.$emit('autoplayStart', 3000)"> -->
+        <div class="right">
           <slider ref="swiper2" class="swiper" :options="swiper2" @slide="({ currentPage }) => $refs.swiper1.$emit('slideTo', currentPage)">
             <slideritem v-for="(item, index) in list" :key="index">
               <div class="item">
@@ -88,7 +89,7 @@ export default {
       },
       swiper2: {
         loop: true,
-        autoplay: 5000,
+        autoplay: 3000,
         loopedSlides: 8,
         pagination: false,
         centeredSlides: true,

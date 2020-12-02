@@ -60,7 +60,7 @@ export default {
           ]
         },
         {
-          name: '孔艳萍',
+          name: '朱建新',
           level: '早教专家、中国人生科学学会婴幼儿专业委员会特聘专家',
           img: require('@/assets/about/team/2.png'),
           cont: [
@@ -68,7 +68,7 @@ export default {
           ]
         },
         {
-          name: '孔艳萍',
+          name: '孔燕萍',
           level: '资深早期教育专家、中国人生科学学前教育分会常务副会长',
           img: require('@/assets/about/team/3.png'),
           cont: [

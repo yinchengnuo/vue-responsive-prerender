@@ -84,10 +84,14 @@
             max-height: 0;
             overflow: hidden;
             @include flex(column);
+            align-items: flex-start;
             background: #ffffff;
-            @include abs(100%, 50%, 200vw, auto);
-            transform: translateX(-50%);
+            // @include abs(100%, 50%, 200vw, auto);
+            @include abs(100%, -100vw, 200vw, auto);
+            // transform: translateX(-50%);
             box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.1);
+            box-sizing: border-box;
+            padding-left: calc(100vw + 32px);
             &.in {
               z-index: 2;
               animation: view-in 0s forwards;

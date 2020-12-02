@@ -61,7 +61,7 @@ const routes = [
           {
             path: 'team',
             name: 'AboutTeam',
-            meta: { title: '管理团队' },
+            meta: { title: '师资团队' },
             component: () => import('@/views/about/team')
           }
         ]
