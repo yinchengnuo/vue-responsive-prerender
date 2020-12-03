@@ -5,7 +5,7 @@
       <img v-if="$route.path === '/media/media'" src="@/assets/media/1.png" class="banner">
       <img v-if="$route.path === '/media/video'" src="@/assets/media/1.png" class="banner">
       <img v-if="$route.path === '/media/party'" src="@/assets/media/1.png" class="banner">
-      <div class="navbar-wrapper" :class="{ fixed: this.$store.state.top >= 600 }">
+      <div class="navbar-wrapper" :class="{ fixed: this.$store.state.top >= (document.body.offsetWidth >= 1200 ? 600 : (document.body.offsetWidth / 750 * 375)) }">
         <div class="navbar">
           <router-link class="router-link" to="/media/news">公司动态</router-link>
           <router-link class="router-link" to="/media/media">媒体报道</router-link>

@@ -66,6 +66,52 @@ div:focus {
     letter-spacing: rpx(1);
     margin-bottom: rpx(32);
   }
+
+  .news-list {
+    .page {
+      display: none;
+    }
+    .wrapper {
+      overflow: hidden;
+      .item {
+        display: none;
+      }
+      .itemMo {
+        @include flex();
+        height: rpx(187);
+        margin: rpx(60) 0;
+        padding: 0 rpx(20);
+        box-sizing: border-box;
+        justify-content: space-between;
+        .left {
+          height: rpx(187);
+          @include flex(column);
+          align-items: flex-start;
+          justify-content: space-between;
+          .title {
+            font-size: rpx(30);
+            font-weight: 600;
+            color: #4E4C56;
+            line-height: rpx(44);
+            letter-spacing: rpx(1);
+          }
+          span {
+            font-size: rpx(22);
+            font-weight: 500;
+            color: #D1D1D6;
+            line-height: rpx(22);
+          }
+        }
+        .poster {
+          height: 100%;
+          width: rpx(250);
+          object-fit: cover;
+          margin-left: rpx(24);
+          border-radius: rpx(12);
+        }
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -341,6 +387,9 @@ div:focus {
       @include flex();
       flex-wrap: wrap;
       justify-content: flex-start;
+      .itemMo {
+        display: none;
+      }
       .item {
         width: 460px;
         height: 488px;

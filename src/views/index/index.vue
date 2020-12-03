@@ -208,7 +208,7 @@
     <div class="split" />
     <div class="sec5 overflow">
       <div class="sec-t">公司新闻 为幼儿大爱前行</div>
-      <div class="sec-st">“感统训练”成为越来越多教育领域投资者青睐的蓝海</div>
+      <div class="sec-st">为中国感统教育事业发展贡献力量</div>
       <div class="content">
         <div class="poster">
           <img v-for="(item, index) in newsList" :key="index" :src="item.pic" :class="{ active: sec5.active === index }">

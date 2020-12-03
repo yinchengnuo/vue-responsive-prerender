@@ -184,6 +184,9 @@ export default {
     this.getHover()
   },
   mounted() {
+    this.$event.$on('dialog', () => {
+      this.bottom_sheet = true
+    })
     setTimeout(() => {
       this.mounted = true
     }, 666)

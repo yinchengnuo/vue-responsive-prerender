@@ -10,7 +10,8 @@
 * {
   margin: 0;
   padding: 0;
-  // user-select: none;
+  -webkit-overflow-scrolling: touch;
+  -webkit-tap-highlight-color: transparent!important;
 }
 
 html, body {

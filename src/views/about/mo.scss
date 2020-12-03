@@ -5,9 +5,11 @@
         width: 100vw;
         display: block;
         height: rpx(375);
+        object-fit: cover;
       }
       .navbar-wrapper {
         top: 0;
+        width: 100%;
         z-index: 123;
         height: rpx(88);
         position: relative;

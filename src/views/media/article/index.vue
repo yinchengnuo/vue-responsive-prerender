@@ -21,11 +21,6 @@
       </div>
     </div>
   </div>
-  <!-- <div v-else :class="$store.state.device">
-    <div v-if="data" class="title">{{ data.title }}</div>
-    <div v-if="data" class="stitle">{{ data.stitle }}</div>
-    <div v-if="data" class="html" v-html="data.content" />
-  </div> -->
 </template>
 
 <script>

@@ -1,1 +1,49 @@
-@media screen and (max-width: 1200px) {}
+@media screen and (max-width: 1200px) {
+  .article {
+    padding: rpx(32);
+    box-sizing: border-box;
+    min-height: calc(100vh - 100vw / 750 * (192 + 156));
+    .back, .right {
+      display: none;
+    }
+    .title {
+      font-weight: 500;
+      color: #333333;
+      font-size: rpx(32);
+      line-height: rpx(45);
+      letter-spacing: rpx(1);
+      margin-bottom: rpx(32);
+    }
+    .stitle {
+      font-weight: 400;
+      color: #606060;
+      font-size: rpx(26);
+      line-height: rpx(40);
+      letter-spacing: rpx(1);
+      margin-bottom: rpx(32);
+    }
+    .html {
+      ::v-deep {
+        section, p {
+          font-weight: 400;
+          margin: rpx(8) 0;
+          color: #606060;
+          font-size: rpx(26)!important;
+          line-height: rpx(40)!important;
+          letter-spacing: rpx(1)!important;
+        }
+        img {
+          margin: rpx(8) auto;
+          border-radius: rpx(8);
+          width: 100%!important;
+          height: auto!important;
+        }
+        video {
+          border-radius: rpx(8);
+          width: 100%!important;
+          height: rpx(338)!important;
+        }
+      }
+    }
+  }
+}
