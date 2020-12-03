@@ -197,7 +197,7 @@
       <div class="contentMo overflow">
         <div class="sec-t">老岳讲感统 我们在行动</div>
         <div class="sec-st">结合中国传统家庭教育习惯，推出符合中国国情感统教育体系</div>
-        <slider ref="sec4Swiper" class="swiper" :options="sec4.options">
+        <slider class="swiper" :options="sec4.options">
           <slideritem v-for="(item, index) in sec4.data" :key="index" @tap="$router.push(item.to)">
             <img :src="item.banner">
             <div class="text">{{ item.text }}</div>
