@@ -18,10 +18,10 @@
           <p>郑州动漫火车儿童感统训练中心，国内首家全能化感统训练机构，成立于2008年，中心目前拥有室内实训场地2000余平，户外阳光训练场300平…</p>
           <span @click="$router.replace('/service/dmhc')">查看服务</span>
         </div>
-        <img src="@/assets/service/1.png">
+        <img src="@/assets/service/2.png">
       </div>
       <div class="item">
-        <img src="@/assets/service/1.png">
+        <img src="@/assets/service/3.png">
         <div>
           <div>启语慧声</div>
           <p>线上+线下探索打造儿童发音训练规范体系课程，目前正在稳步筹建开发中，近期上线尽情期待！</p>

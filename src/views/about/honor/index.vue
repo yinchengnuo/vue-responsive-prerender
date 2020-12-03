@@ -5,7 +5,7 @@
         <span :class="{ active: type === 0 }" @click="switc(0)">岳老师荣誉</span>
         <span :class="{ active: type === 1 }" @click="switc(1)">动漫火车荣誉</span>
       </div>
-      <div v-if="list" class="cent">
+      <div class="cent">
         <slider ref="swiper1" class="swiper" :options="options" @slide="({ currentPage }) => slide(2, currentPage)">
           <slideritem v-for="(item, index) in list" :key="index">
             <img class="right" :src="item.img">
@@ -13,7 +13,7 @@
           </slideritem>
         </slider>
       </div>
-      <div v-if="list" class="righ">
+      <div class="righ">
         <div class="cont">
           <i class="el-icon-arrow-up" @click="$refs.swiper1.$emit('slidePre')" />
           <div class="swiper-wrapper">
@@ -95,9 +95,11 @@ export default {
       })
     },
     switc(act) {
-      console.log(123)
       this.type = act
-      this.list = act ? this.list1 : this.list2
+      this.list = []
+      setTimeout(() => {
+        this.list = act ? this.list1 : this.list2
+      })
     }
   }
 }
