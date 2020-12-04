@@ -72,7 +72,7 @@ div:focus {
       display: none;
     }
     .contentMo {
-      .sec1, .sec2, .sec3 {
+      .sec1, .sec2, .sec3, .sec4 {
         .title {
           font-weight: 600;
           color: #000000;
@@ -102,7 +102,7 @@ div:focus {
           height: rpx(386);
           margin: 0 auto rpx(32);
         }
-        .swiper {
+        .swiper1 {
           height: rpx(600);
           ::v-deep {
             .slider-pagination-bullet-active {
@@ -139,9 +139,67 @@ div:focus {
                 border: rpx(6) solid #BFD3F7;
                 &::before, &::after {
                   content: "";
-                  height: rpx(2);
-                  width: rpx(123);
-                  display: inline-block;
+                  @include abs(rpx(7), 0, rpx(375), rpx(0));
+                  border-top: rpx(2) dashed rgba(0, 0, 0, 0.25);
+                }
+                &::before {
+                  left: rpx(-375);
+                }
+              }
+              .tt {
+                width: rpx(408);
+                color: #606060;
+                font-weight: 400;
+                font-size: rpx(24);
+                line-height: rpx(42);
+                white-space: pre-wrap;
+                letter-spacing: rpx(1);
+              }
+            }
+          }
+        }
+        .swiper2 {
+          height: rpx(600);
+          ::v-deep {
+            .slider-pagination-bullet-active {
+              background: #2487FF;
+            }
+            .slider-item {
+              padding: rpx(108) 0 ;
+              box-sizing: border-box;
+              flex-direction: column;
+              justify-content: flex-start;
+              .yy {
+                font-weight: 500;
+                color: #2487FF;
+                font-size: rpx(28);
+                line-height: rpx(40);
+                margin-bottom: rpx(8);
+                letter-spacing: rpx(1);
+              }
+              .mm {
+                font-weight: 400;
+                color: #2487FF;
+                font-size: rpx(24);
+                line-height: rpx(33);
+                margin-bottom: rpx(10);
+              }
+              .cc {
+                width: rpx(16);
+                height: rpx(16);
+                border-radius: 50%;
+                position: relative;
+                background: #0050E1;
+                display: inline-block;
+                margin-bottom: rpx(10);
+                border: rpx(6) solid #BFD3F7;
+                &::before, &::after {
+                  content: "";
+                  @include abs(rpx(7), 0, rpx(375), rpx(0));
+                  border-top: rpx(2) dashed rgba(0, 0, 0, 0.25);
+                }
+                &::before {
+                  left: rpx(-375);
                 }
               }
               .tt {

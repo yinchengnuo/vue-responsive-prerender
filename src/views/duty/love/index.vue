@@ -75,13 +75,24 @@
       <div class="sec3 overflow">
         <div class="title">发展历程</div>
         <div class="line" />
+        <slider ref="swiper" class="swiper1" :options="{ currentPage: 3, loop: true, thresholdDistance: '1', thresholdTime: '666666' }">
+          <slideritem v-for="(item, index) in his" :key="index">
+            <div class="yy">{{ item.y }}</div>
+            <div class="mm">{{ item.m }}</div>
+            <span class="cc" />
+            <div class="tt">{{ item.t }}</div>
+          </slideritem>
+        </slider>
+      </div>
+      <div class="split" />
+      <div class="sec4 overflow">
+        <div class="title">我们的行动</div>
+        <div class="line" />
         <slider ref="swiper" class="swiper" :options="{ currentPage: 3, loop: true, thresholdDistance: '1', thresholdTime: '666666' }">
           <slideritem v-for="(item, index) in his" :key="index">
             <div class="yy">{{ item.y }}</div>
             <div class="mm">{{ item.m }}</div>
-            <span class="cc">
-              123
-            </span>
+            <span class="cc" />
             <div class="tt">{{ item.t }}</div>
           </slideritem>
         </slider>
