@@ -42,7 +42,11 @@
             >{{ item.name }}</div>
           </div>
         </div>
-        <img src="@/assets/index/ytt.png" class="right">
+        <div class="right">
+          <img :class="{ act: sec2.active === 0 }" src="@/assets/index/sec2-1.png">
+          <img :class="{ act: sec2.active === 1 }" src="@/assets/index/sec2-2.png">
+          <img :class="{ act: sec2.active === 2 }" src="@/assets/index/sec2-3.png">
+        </div>
       </div>
       <div class="mo-content">
         <img src="@/assets/index/mo-ytt.png" class="right">

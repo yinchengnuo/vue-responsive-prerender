@@ -151,8 +151,18 @@
           }
         }
         .right {
-          width: 447px;
+          width: 604px;
           height: 530px;
+          position: relative;
+          img {
+            opacity: 0;
+            object-fit: cover;
+            transition: all 0.5s;
+            @include abs(67px, 0, 100%, 395px);
+            &.act {
+              opacity: 1;
+            }
+          }
         }
       }
     }

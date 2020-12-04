@@ -67,6 +67,99 @@ div:focus {
     margin-bottom: rpx(32);
   }
 
+  .duty-item {
+    >.sec1, >.sec2, >.sec3 {
+      display: none;
+    }
+    .contentMo {
+      .sec1, .sec2, .sec3 {
+        .title {
+          font-weight: 600;
+          color: #000000;
+          font-size: rpx(28);
+          line-height: rpx(40);
+          margin: rpx(32) rpx(32) rpx(24); 
+        }
+        .line {
+          height: rpx(2);
+          width: rpx(172);
+          margin-left: rpx(32);
+          background: #2487FF;
+          margin-bottom: rpx(24);
+        }
+        .text {
+          width: rpx(686);
+          font-weight: 400;
+          color: #606060;
+          font-size: rpx(24);
+          line-height: rpx(42);
+          letter-spacing: rpx(1);
+          margin: 0 rpx(32) rpx(32);
+        }
+        .b {
+          display: block;
+          width: rpx(686);
+          height: rpx(386);
+          margin: 0 auto rpx(32);
+        }
+        .swiper {
+          height: rpx(600);
+          ::v-deep {
+            .slider-pagination-bullet-active {
+              background: #2487FF;
+            }
+            .slider-item {
+              padding: rpx(108) 0 ;
+              box-sizing: border-box;
+              flex-direction: column;
+              justify-content: flex-start;
+              .yy {
+                font-weight: 500;
+                color: #2487FF;
+                font-size: rpx(28);
+                line-height: rpx(40);
+                margin-bottom: rpx(8);
+                letter-spacing: rpx(1);
+              }
+              .mm {
+                font-weight: 400;
+                color: #2487FF;
+                font-size: rpx(24);
+                line-height: rpx(33);
+                margin-bottom: rpx(10);
+              }
+              .cc {
+                width: rpx(16);
+                height: rpx(16);
+                border-radius: 50%;
+                position: relative;
+                background: #0050E1;
+                display: inline-block;
+                margin-bottom: rpx(10);
+                border: rpx(6) solid #BFD3F7;
+                &::before, &::after {
+                  content: "";
+                  height: rpx(2);
+                  width: rpx(123);
+                  display: inline-block;
+                }
+              }
+              .tt {
+                width: rpx(408);
+                color: #606060;
+                font-weight: 400;
+                font-size: rpx(24);
+                line-height: rpx(42);
+                white-space: pre-wrap;
+                letter-spacing: rpx(1);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
   .news-list {
     .page {
       display: none;
@@ -176,6 +269,9 @@ div:focus {
     }
   }
   .duty-item {
+    .contentMo {
+      display: none;
+    }
     .sec1 {
       .bg {
         width: 1420px;

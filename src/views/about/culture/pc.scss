@@ -96,7 +96,7 @@
             opacity: 0;
             font-size: 16px;
             font-weight: 400;
-            color: #2487FF;
+            color:#333333;
             line-height: 22px;
             text-align: center;
             padding-bottom: 6px;
@@ -104,22 +104,26 @@
             transition: all 0.5s;
             @include flex(column);
             transform: translateX(-50%);
-            border-bottom: 1px solid #2487FF;
+            // border-bottom: 1px solid#333333;
             @include abs(100px, 50%, auto, auto);
+            img {
+              width: 280px;
+              border-top: 1px solid#333333;
+            }
             span {
               line-height: 0;
               font-size: 22px;
               font-weight: 100;
-              color:  #2487FF;
+              color: #333333;
               margin-bottom: 12px;
               &::before {
                 content: "";
-                background: #2487FF;
+                background:#333333;
                 @include abs(5px, 0, calc(50% - 10px), 1px);
               }
               &::after {
                 content: "";
-                background: #2487FF;
+                background:#333333;
                 @include abs(5px, auto, calc(50% - 10px), 1px);
                 right: 0;
               }

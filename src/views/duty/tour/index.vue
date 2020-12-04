@@ -23,29 +23,11 @@
       <div class="time">
         <div class="line-dash" />
         <div class="content">
-          <div class="item">
-            <div class="year">2017年</div>
-            <div class="month">7月</div>
+          <div v-for="(item, index) in his" :key="index" class="item">
+            <div class="year">{{ item.y }}</div>
+            <div class="month">{{ item.m }}</div>
             <div class="circle" />
-            <div class="text">岳老师首次用7天时间，培训来自全国各地慕名而来的感统学员。</div>
-          </div>
-          <div class="item">
-            <div class="year">2018年</div>
-            <div class="month">5月</div>
-            <div class="circle" />
-            <div class="text">老岳讲感统商学院正式成立，以培养专业感统训练老师为己任。</div>
-          </div>
-          <div class="item">
-            <div class="year">2019年</div>
-            <div class="month">9月</div>
-            <div class="circle" />
-            <div class="text">老岳走进郑州幼儿师范高等专科院校，和学校联手为社会输出感统人才。</div>
-          </div>
-          <div class="item">
-            <div class="year">2020年</div>
-            <div class="month">7月</div>
-            <div class="circle" />
-            <div class="text">老岳的国内首家标准感觉统合训练场落成，更快更标准的进行感觉统合培训学习。</div>
+            <div class="text">{{ item.t }}</div>
           </div>
         </div>
       </div>
@@ -97,6 +79,12 @@ export default {
         thresholdDistance: '1',
         thresholdTime: '666666'
       },
+      his: [
+        { y: '2017年', m: '7月', t: '岳老师首次用7天时间，培训来自全国各地慕名而来的感统学员。' },
+        { y: '2018年', m: '5月', t: '老岳讲感统商学院正式成立，以培养专业感统训练老师为己任。' },
+        { y: '2019年', m: '9月', t: '老岳走进郑州幼儿师范高等专科院校，和学校联手为社会输出感统人才。' },
+        { y: '2020年', m: '7月', t: '老岳的国内首家标准感觉统合训练场落成，更快更标准的进行感觉统合培训学习。' }
+      ],
       list: [
         { data: '2019年年6月', text: ' 老岳来到了广州 举办第了9期认证研修班 ', img: require('@/assets/duty/tour/1.png') },
         { data: '2020年6月', text: ' 老岳举办了第21期高级研修班 ', img: require('@/assets/duty/tour/2.png') },

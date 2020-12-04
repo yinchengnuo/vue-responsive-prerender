@@ -23,29 +23,11 @@
       <div class="time">
         <div class="line-dash" />
         <div class="content">
-          <div class="item">
-            <div class="year">2014年春</div>
-            <div class="month">动漫火车</div>
+          <div v-for="(item, index) in his" :key="index" class="item">
+            <div class="year">{{ item.y }}</div>
+            <div class="month">{{ item.m }}</div>
             <div class="circle" />
-            <div class="text">老岳开展第一堂家长课堂，现场家庭28组</div>
-          </div>
-          <div class="item">
-            <div class="year">2018年冬</div>
-            <div class="month">山西晋中</div>
-            <div class="circle" />
-            <div class="text">老岳第413场家长讲座，首次千人讲座达成</div>
-          </div>
-          <div class="item">
-            <div class="year">2019年秋</div>
-            <div class="month">江苏扬州</div>
-            <div class="circle" />
-            <div class="text">老岳第500场家长讲座，现场家庭达1100组</div>
-          </div>
-          <div class="item">
-            <div class="year">2020年10月24日</div>
-            <div class="month">浙江杭州</div>
-            <div class="circle" />
-            <div class="text">老岳第533场家长讲座我们仍在路上……</div>
+            <div class="text">{{ item.t }}</div>
           </div>
         </div>
       </div>
@@ -97,6 +79,12 @@ export default {
         thresholdDistance: '1',
         thresholdTime: '666666'
       },
+      his: [
+        { y: '2014年春', m: '动漫火车', t: '老岳开展第一堂家长课堂，现场家庭28组' },
+        { y: '2018年冬', m: '山西晋中', t: '老岳第413场家长讲座，首次千人讲座达成' },
+        { y: '2019年秋', m: '江苏扬州', t: '老岳第500场家长讲座，现场家庭达1100组' },
+        { y: '2020年10月24日', m: '浙江杭州', t: '老岳第533场家长讲座我们仍在路上……' }
+      ],
       list: [
         { data: '2020年9月', text: '郑州动漫火车 老岳举行第526期家长讲座 ', img: require('@/assets/duty/talk/1.png') },
         { data: '2020年10月', text: '山西动漫火车 老岳举行第531场家长讲座 ', img: require('@/assets/duty/talk/2.png') },

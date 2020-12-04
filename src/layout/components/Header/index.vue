@@ -44,7 +44,7 @@
             <van-collapse-item title="产品与服务" name="产品与服务">
               <router-link class="router-link" to="/service/lyjgt">老岳讲感统</router-link>
               <router-link class="router-link" to="/service/dmhc">动漫火车感统</router-link>
-              <router-link class="router-link" to="/service/qyhs">启语慧声</router-link>
+              <router-link class="router-link" to="/service">启语慧声 <span class="bhilding">建设中</span></router-link>
             </van-collapse-item>
             <van-collapse-item title="社会责任" name="社会责任">
               <router-link class="router-link" to="/duty/love">《爱的守望》公益行</router-link>

@@ -80,6 +80,18 @@
                   font-size: rpx(28);
                   line-height: rpx(40);
                   justify-content: flex-start;
+                  .bhilding {
+                    margin-left: 8px;
+                    width: 47px;
+                    height: 19px;
+                    @include flex();
+                    border-radius: 10px;
+                    background: #000000;
+                    font-size: 12px;
+                    font-weight: 400;
+                    color: #FFFFFF;
+                    line-height: 17px;
+                  }
                 }
               }
             }

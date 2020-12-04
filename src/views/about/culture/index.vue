@@ -30,6 +30,7 @@
           <div class="hover">
             <span>︿</span>
             <div>{{ item.val }}</div>
+            <img :src="item.banner">
           </div>
         </div>
       </div>
@@ -54,11 +55,11 @@ export default {
     return {
       active: -1,
       list: [
-        { name: '公司愿景', val: '成为感统行业最值得尊敬的教育机构', img1: require('@/assets/about/culture/1.png'), img2: require('@/assets/about/culture/11.png') },
-        { name: '公司使命', val: '用标准感统成就美好人生', img1: require('@/assets/about/culture/2.png'), img2: require('@/assets/about/culture/22.png') },
-        { name: '经营理念', val: '用标准感统感动人心', img1: require('@/assets/about/culture/3.png'), img2: require('@/assets/about/culture/33.png') },
-        { name: '价值观', val: '成就孩子 提升自己 务实创新 合作感恩', img1: require('@/assets/about/culture/4.png'), img2: require('@/assets/about/culture/44.png') },
-        { name: '教育理念', val: '爱是一切问题的答案', img1: require('@/assets/about/culture/5.png'), img2: require('@/assets/about/culture/55.png') }
+        { name: '公司愿景', val: '成为感统行业最值得尊敬的教育机构', img1: require('@/assets/about/culture/1.png'), img2: require('@/assets/about/culture/11.png'), banner: require('@/assets/about/culture/c1.png') },
+        { name: '公司使命', val: '用标准感统成就美好人生', img1: require('@/assets/about/culture/2.png'), img2: require('@/assets/about/culture/22.png'), banner: require('@/assets/about/culture/c2.png') },
+        { name: '经营理念', val: '用标准感统感动人心', img1: require('@/assets/about/culture/3.png'), img2: require('@/assets/about/culture/33.png'), banner: require('@/assets/about/culture/c3.png') },
+        { name: '价值观', val: '成就孩子 提升自己 务实创新 合作感恩', img1: require('@/assets/about/culture/4.png'), img2: require('@/assets/about/culture/44.png'), banner: require('@/assets/about/culture/c4.png') },
+        { name: '教育理念', val: '爱是一切问题的答案', img1: require('@/assets/about/culture/5.png'), img2: require('@/assets/about/culture/55.png'), banner: require('@/assets/about/culture/c5.png') }
       ]
     }
   }
