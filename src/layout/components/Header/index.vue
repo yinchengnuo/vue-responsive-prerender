@@ -185,13 +185,15 @@ export default {
   },
   mounted() {
     this.$event.$on('dialog', () => {
-      this.bottom_sheet = true
+      if (document.body.offsetWidth < 1200) {
+        this.bottom_sheet = true
+      }
     })
     setTimeout(() => {
       this.mounted = true
     }, 666)
     window.addEventListener('scroll', e => {
-      console.log(this.$store.state.top)
+      // console.log(this.$store.state.top)
       this.$store.commit('UP', e.target.documentElement.scrollTop > this.$store.state.top)
       this.$store.commit('TOP', e.target.documentElement.scrollTop)
     })
