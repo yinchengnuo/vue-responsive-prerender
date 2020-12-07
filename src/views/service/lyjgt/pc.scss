@@ -39,13 +39,16 @@
       }
     }
     .sec1, .sec2, .sec3 {
+      .contentMo {
+        display: none;
+      }
       &.sec2 {
         background: #F7F8FA;
         .content {
           > div {
             width: 581px;
             > section {
-              width: 440px;
+              width: 520px;
               @include flex();
               flex-wrap: wrap;
               overflow: hidden;
@@ -53,11 +56,17 @@
               > p {
                 width: 50%;
                 height: 38px;
+                @include flex();
                 font-size: 16px;
                 font-weight: 500;
                 color: #1F2F4D;
                 margin-top: 16px;
                 line-height: 22px;
+                justify-content: flex-start;
+                > img {
+                  width: 32px;
+                  height: 32px;
+                }
               }
             }
           }

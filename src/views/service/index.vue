@@ -29,6 +29,30 @@
         </div>
       </div>
     </div>
+
+    <div class="contentMo">
+      <div class="item">
+        <img src="@/assets/service/1.png">
+        <div>老岳讲感统</div>
+        <p>线上多平台感统知识传播与训练，通过网络渠道，传播专业感统知识，指导家庭感统训练，目前网内粉丝超过400万，网外粉丝超过5000万！</p>
+        <section @click="$router.replace('/service/lyjgt')">查看服务</section>
+      </div>
+      <div class="split" />
+      <div class="item">
+        <img src="@/assets/service/2.png">
+        <div>动漫火车感统</div>
+        <p>郑州动漫火车儿童感统训练中心，国内首家全能化感统训练机构，成立于2008年，中心目前拥有室内实训场地2000余平，户外阳光训练场300平…</p>
+        <section @click="$router.replace('/service/dmhc')">查看服务</section>
+      </div>
+      <div class="split" />
+      <div class="item">
+        <img src="@/assets/service/3.png">
+        <div>启语慧声</div>
+        <p>线上+线下探索打造儿童发音训练规范体系课程，目前正在稳步筹建开发中，近期上线尽情期待！</p>
+        <section class="building">建设中</section>
+      </div>
+      <div class="split" />
+    </div>
   </div>
 </template>
 

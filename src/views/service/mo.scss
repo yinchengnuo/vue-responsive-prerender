@@ -1,5 +1,48 @@
 @media screen and (max-width: 1200px) {
   .service {
-    height: 100%;
+    .banner, .content {
+      display: none;
+    }
+    .contentMo {
+      .item {
+        height: rpx(777);
+        padding: rpx(32);
+        position: relative;
+        box-sizing: border-box;
+        img {
+          width: 100%;
+          margin-bottom: rpx(32);
+        }
+        div {
+          color: #000000;
+          font-weight: 600;
+          font-size: rpx(28);
+          line-height: rpx(40);
+          margin-bottom: rpx(32);
+        }
+        p {
+          font-size: rpx(24);
+          font-weight: 400;
+          color: #606060;
+          line-height: rpx(42);
+          letter-spacing: rpx(1);
+        }
+        section {
+          @include flex();
+          font-weight: 500;
+          color: #FFFFFF;
+          font-size: rpx(24);
+          line-height: rpx(33);
+          letter-spacing: rpx(1);
+          background: #2487FF;
+          border-radius: rpx(26);
+          box-shadow: rpx(0) rpx(2) rpx(4) rpx(0) #2487FF;
+          @include abs(rpx(694), rpx(286), rpx(179), rpx(51));
+          &.building {
+            background-color: #E75848;
+          }
+        }
+      }
+    }
   }
 }

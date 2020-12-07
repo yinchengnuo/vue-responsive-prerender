@@ -6,7 +6,7 @@
     .header-content-mo {
       top: 0;
       left: 0;
-      width: 100vw;
+      width: 100%;
       z-index: 999999;
       position: fixed;
       height: rpx(95);
@@ -80,6 +80,9 @@
                   font-size: rpx(28);
                   line-height: rpx(40);
                   justify-content: flex-start;
+                  &.active {
+                    color: #2487FF;
+                  }
                   .bhilding {
                     margin-left: 8px;
                     width: 47px;
@@ -101,7 +104,7 @@
     }
     .footer-content-mo {
       bottom: 0;
-      width: 100vw;
+      width: 100%;
       z-index: 666666;
       position: fixed;
       @include flex();

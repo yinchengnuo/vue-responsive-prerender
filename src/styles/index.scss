@@ -214,6 +214,53 @@ div:focus {
             }
           }
         }
+        .swiper-wrapper {
+          height: rpx(795);
+          box-sizing: border-box;
+          padding: 0 rpx(32) rpx(32);
+          .img {
+            height: rpx(415);
+            margin-bottom: rpx(32);
+            position: relative;
+            img {
+              opacity: 0;
+              transition: all 0.5s;
+              @include abs(0, 0, 100%, 100%);
+              &.active {
+                opacity: 1;
+              }
+            }
+          }
+          .swiperMo {
+            height: rpx(348);
+            ::v-deep {
+              .slider-item {
+                height: 50%;
+                text-align: left;
+                white-space: pre-wrap;
+                box-sizing: border-box;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                .yy {
+                  font-size: rpx(24);
+                  font-weight: 500;
+                  color: #2487FF;
+                  line-height: rpx(42);
+                  letter-spacing: rpx(1);
+                  margin-bottom: rpx(16);
+                }
+                .tt {
+                  font-size: rpx(24);
+                  font-weight: 400;
+                  color: #606060;
+                  line-height: rpx(42);
+                  letter-spacing: rpx(1);
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -496,6 +543,15 @@ div:focus {
         .left {
           width: 624px;
           height: 100%;
+          position: relative;
+          img {
+            opacity: 0;
+            transition: all 0.5s;
+            @include abs(0, 0, 100%, 100%);
+            &.active {
+              opacity: 1;
+            }
+          }
         }
         .right {
           width: 714px;

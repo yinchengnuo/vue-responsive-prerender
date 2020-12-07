@@ -19,6 +19,10 @@ html, body {
   @include scrollBar();
 }
 
+body {
+  overflow-x: hidden;
+}
+
 @keyframes view-out {
   from { max-height: 220px; }
   to { max-height: 0px; }

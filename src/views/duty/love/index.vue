@@ -37,14 +37,10 @@
       <div class="line" />
       <div class="content">
         <div class="left">
-          <slider ref="swiper1" class="swiper" :options="swiper1">
-            <slideritem v-for="(item, index) in list" :key="index">
-              <img :src="item.img">
-            </slideritem>
-          </slider>
+          <img v-for="(item, index) in list" :key="index" :src="item.img" :class="{ active: index === activePc }">
         </div>
         <div class="right">
-          <slider ref="swiper2" class="swiper" :options="swiper2" @slide="({ currentPage }) => $refs.swiper1.$emit('slideTo', currentPage)">
+          <slider ref="swiper2" class="swiper" :options="swiper2" @slide="({ currentPage }) => activePc = currentPage">
             <slideritem v-for="(item, index) in list" :key="index">
               <div class="item">
                 <div class="date">{{ item.data }}</div>
@@ -88,14 +84,17 @@
       <div class="sec4 overflow">
         <div class="title">我们的行动</div>
         <div class="line" />
-        <slider ref="swiper" class="swiper" :options="{ currentPage: 3, loop: true, thresholdDistance: '1', thresholdTime: '666666' }">
-          <slideritem v-for="(item, index) in his" :key="index">
-            <div class="yy">{{ item.y }}</div>
-            <div class="mm">{{ item.m }}</div>
-            <span class="cc" />
-            <div class="tt">{{ item.t }}</div>
-          </slideritem>
-        </slider>
+        <div class="swiper-wrapper">
+          <div class="img">
+            <img v-for="(item, index) in list" :key="index" :src="item.img" :class="{ active: index === activeMo }">
+          </div>
+          <slider class="swiperMo" :options="swiper2" @slide="({ currentPage }) => activeMo = currentPage">
+            <slideritem v-for="(item, index) in list" :key="index">
+              <div class="yy">{{ item.data }}</div>
+              <div class="tt">{{ item.text }}</div>
+            </slideritem>
+          </slider>
+        </div>
       </div>
       <div class="split" />
     </div>
@@ -112,6 +111,8 @@ export default {
         effect: 'fade',
         pagination: false
       },
+      activePc: 0,
+      activeMo: 0,
       swiper2: {
         loop: true,
         autoplay: 3000,

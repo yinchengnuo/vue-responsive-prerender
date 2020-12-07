@@ -1,5 +1,60 @@
 @media screen and (max-width: 1200px) {
   .lyjgt {
-    height: 100%;
+    .banner {
+      width: 100%;
+    }
+    .float, .join-now {
+      display: none;
+    }
+    .sec1, .sec3 {
+      .content {
+        display: none;
+      }
+      padding: 0 rpx(32);
+      box-sizing: border-box;
+      .contentMo {
+        img {
+          width: 100%;
+        }
+        .text {
+          font-size: rpx(24);
+          font-weight: 400;
+          color: #606060;
+          line-height: rpx(42);
+          letter-spacing: rpx(1);
+        }
+      }
+    }
+    .sec2 {
+      .content {
+        display: none;
+      }
+      .contentMo {
+        section {
+          @include flex();
+          flex-wrap: wrap;
+          padding: 0 rpx(32);
+          box-sizing: border-box;
+          justify-content: flex-start;
+          p {
+            width: 50%;
+            @include flex();
+            color: #1F2F4D;
+            font-weight: 500;
+            font-size: rpx(24);
+            line-height: rpx(42);
+            margin-bottom: rpx(24);
+            justify-content: flex-start;
+            img {
+              width: rpx(38);
+              height: rpx(38);
+            }
+          }
+        }
+        img {
+          width: 100%;
+        }
+      }
+    }
   }
 }
