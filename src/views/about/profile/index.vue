@@ -10,25 +10,25 @@
       <div class="data">
         <div class="item">
           <div class="num">
-            <countTo class="count-to" :start-val="0" :end-val="100" :duration="5000" />名
+            <countTo class="count-to" :start-val="0" :end-val="130" :duration="5000" />名
           </div>
           <div class="text">专业师资队伍</div>
         </div>
         <div class="item">
           <div class="num">
-            <countTo class="count-to" :start-val="0" :end-val="500" :duration="5000" />场
+            <countTo class="count-to" :start-val="0" :end-val="533" :duration="5000" />场
           </div>
           <div class="text">大型感统知识讲座</div>
         </div>
         <div class="item">
           <div class="num">
-            <countTo class="count-to" :start-val="0" :end-val="5000" :duration="5000" />名
+            <countTo class="count-to" :start-val="0" :end-val="6500" :duration="5000" />名
           </div>
           <div class="text">培养优秀感统精英</div>
         </div>
         <div class="item">
           <div class="num">
-            <countTo class="count-to" :start-val="0" :end-val="10000" :duration="5000" />名
+            <countTo class="count-to" :start-val="0" :end-val="500000" :duration="5000" />名
           </div>
           <div class="text">帮助儿童获得专业训练</div>
         </div>

@@ -89,8 +89,8 @@
                 </div>
               </div>
               <div class="mid">
-                <div><span>10</span>年游学感统教育研发</div>
-                <div><span>469</span>场全国感统讲座</div>
+                <div><span>12</span>年游学感统教育研发</div>
+                <div><span>533</span>场全国感统讲座</div>
               </div>
               <div class="bot">
                 <div class="t">服务范围：</div>
@@ -99,7 +99,7 @@
                 <router-link class="router-link" to="/service/lyjgt">感统商学院 》</router-link>
               </div>
             </div>
-            <img class="right" src="@/assets/index/sec3-banner1.png">
+            <img class="right" src="@/assets/index/sec3-banner1.jpg">
           </slideritem>
           <slideritem>
             <div class="left">
@@ -129,7 +129,7 @@
         <slider ref="sec3SwiperMo" class="swiper" :options="{ ...sec3.options, pagination: true, loop: true, centeredSlides: true }" @slide="({ currentPage }) => sec3.active = currentPage.toString()">
           <slideritem>
             <img class="logo" src="@/assets/index/sec3-logo1.png">
-            <img class="top" src="@/assets/index/sec3-banner1.png">
+            <img class="top" src="@/assets/index/sec3-banner1.jpg">
             <div class="n">老岳讲感统</div>
             <div class="line">1</div>
             <div class="t">线上多平台感统知识传播与训练</div>
@@ -140,11 +140,11 @@
             </div>
             <div class="bot">
               <div class="i">
-                <div class="num"><span>469</span>场</div>
+                <div class="num"><span>533</span>场</div>
                 <div class="name">全国感统讲座</div>
               </div>
               <div class="i">
-                <div class="num"><span>10</span>年</div>
+                <div class="num"><span>12</span>年</div>
                 <div class="name">游学专注感统教育研发</div>
               </div>
             </div>
@@ -280,7 +280,7 @@ export default {
           centeredSlides: true
         },
         data: [
-          { text: '《爱的守望》公益行 ', banner: require('@/assets/index/sec4-banner1.png'), to: '/duty/love' },
+          { text: '《爱的守望》公益行 ', banner: require('@/assets/index/sec4-banner1.jpg'), to: '/duty/love' },
           { text: '老岳的1000场讲座 ', banner: require('@/assets/index/sec4-banner2.png'), to: '/duty/talk' },
           { text: '老岳的三尺讲台 ', banner: require('@/assets/index/sec4-banner3.png'), to: '/duty/tour' }
         ]

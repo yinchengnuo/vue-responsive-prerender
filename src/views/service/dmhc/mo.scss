@@ -1,5 +1,100 @@
 @media screen and (max-width: 1200px) {
   .dmhc {
-    height: 100%;
+    .banner, .join-now {
+      display: none;
+    }
+    .sec1 {
+      .content {
+        display: none;
+      }
+      .contentMo {
+        img {
+          width: 100%;
+        }
+        p {
+          font-weight: 400;
+          color: #606060;
+          font-size: rpx(24);
+          line-height: rpx(42);
+          box-sizing: border-box;
+          letter-spacing: rpx(1);
+          padding: 0 rpx(32) rpx(32);
+        }
+      }
+    }
+    .sec2 {
+      .content {
+        display: none;
+      }
+      .contentMo {
+        padding-bottom: rpx(38);
+        video {
+          display: block;
+          width: rpx(679);
+          height: rpx(407);
+          overflow: hidden;
+          object-fit: cover;
+          margin: rpx(32) auto 0;
+          border-radius: rpx(24);
+        }
+        .icons {
+          flex-wrap: wrap;
+          @include flex();
+          div {
+            width: 25%;
+            height: rpx(32);
+            @include flex();
+            margin-top: rpx(38);
+            font-size: rpx(20);
+            font-weight: 500;
+            color: #1F2F4D;
+            line-height: rpx(28);
+            &:nth-child(1), &:nth-child(2), &:nth-child(3) {
+              width: 33.33%;
+            }
+            img {
+              width: rpx(32);
+              height: rpx(32);
+              margin-right: rpx(8);
+            }
+          }
+        }
+      }
+    }
+    .sec3 {
+      .content {
+        padding: 0 rpx(32) rpx(38);
+        box-sizing: border-box;
+        .item {
+          height: rpx(248);
+          box-sizing: border-box;
+          padding: rpx(32) 0 rpx(20);
+          border-bottom: rpx(1) solid #D8D8D8;
+          &:last-child {
+            border: none;
+          }
+          img {
+            display: block;
+            width: rpx(51);
+            height: rpx(51);
+            margin-bottom: rpx(16);
+          }
+          p {
+            font-size: rpx(24);
+            font-weight: 600;
+            color: #1F2F4D;
+            line-height: rpx(33);
+            margin-bottom: rpx(16);
+          }
+          span {
+            font-size: rpx(24);
+            font-weight: 400;
+            color: #606060;
+            line-height: rpx(42);
+            letter-spacing: rpx(1);
+          }
+        }
+      }
+    }
   }
 }

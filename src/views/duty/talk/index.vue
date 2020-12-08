@@ -130,9 +130,9 @@ export default {
         { y: '2020年10月24日', m: '浙江杭州', t: '老岳第533场家长讲座我们仍在路上……' }
       ],
       list: [
-        { data: '2020年9月', text: '郑州动漫火车 老岳举行第526期家长讲座 ', img: require('@/assets/duty/talk/1.png') },
+        { data: '2020年9月', text: '郑州动漫火车 老岳举行第526期家长讲座。给在座数百位家长讲述了儿童成长途中的七大能力，并将智慧父母所应该注意培养的事项以幽默诙谐、简单易懂的方式进行分享。', img: require('@/assets/duty/talk/1.png') },
         { data: '2020年10月', text: '山西动漫火车 老岳举行第531场家长讲座 ', img: require('@/assets/duty/talk/2.png') },
-        { data: '2020年10月', text: '合肥艾米乐贝 老岳开展第532场家长讲座 ', img: require('@/assets/duty/talk/1.png') },
+        { data: '2020年10月', text: '合肥艾米乐贝 老岳开展第532场家长讲座。并为家长们带来了感觉统合在儿童生长发育中的一些关键知识点，尤其是对感统专业知识不甚了解得家长们。', img: require('@/assets/duty/talk/1.png') },
         { data: '2020年10月', text: '杭州花儿朵朵 老岳举行第533场家长讲座 ', img: require('@/assets/duty/talk/2.png') }
       ]
     }

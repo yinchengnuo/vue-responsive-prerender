@@ -7,6 +7,9 @@
       object-fit: cover;
     }
     .sec1 {
+      .contentMo {
+        display: none;
+      }
       .content {
         width: 1420px;
         @include flex();
@@ -53,6 +56,9 @@
     }
     .sec2 {
       background: #F7F8FA;
+      .contentMo {
+        display: none;
+      }
       .content {
         width: 852px;
         @include flex();

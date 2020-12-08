@@ -5,7 +5,7 @@
       <div class="sec-t">产品与服务 赋能中国早幼教</div>
       <div class="sec-st">结合中国传统家庭教育习惯，推出符合中国国情感统教育体系</div>
       <div class="item">
-        <img src="@/assets/service/1.png">
+        <img src="@/assets/service/1.jpg">
         <div>
           <div>老岳讲感统</div>
           <p>线上多平台感统知识传播与训练，通过网络渠道，传播专业感统知识，指导家庭感统训练，目前网内粉丝超过400万，网外粉丝超过5000万！</p>
@@ -32,7 +32,7 @@
 
     <div class="contentMo">
       <div class="item">
-        <img src="@/assets/service/1.png">
+        <img src="@/assets/service/1.jpg">
         <div>老岳讲感统</div>
         <p>线上多平台感统知识传播与训练，通过网络渠道，传播专业感统知识，指导家庭感统训练，目前网内粉丝超过400万，网外粉丝超过5000万！</p>
         <section @click="$router.replace('/service/lyjgt')">查看服务</section>
