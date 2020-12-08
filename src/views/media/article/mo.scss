@@ -14,14 +14,6 @@
       letter-spacing: rpx(1);
       margin-bottom: rpx(32);
     }
-    .stitle {
-      font-weight: 400;
-      color: #606060;
-      font-size: rpx(26);
-      line-height: rpx(40);
-      letter-spacing: rpx(1);
-      margin-bottom: rpx(32);
-    }
     .html {
       ::v-deep {
         section, p {
@@ -41,7 +33,7 @@
         video {
           border-radius: rpx(8);
           width: 100%!important;
-          height: rpx(338)!important;
+          height: rpx(378)!important;
         }
       }
     }

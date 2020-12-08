@@ -56,6 +56,14 @@ export default {
       api_mediaDetail({ id: this.$route.params.id }).then(({ data: { data }}) => {
         this.data = data
         document.title = data.title
+
+        setTimeout(() => {
+          [...Array.from(document.getElementsByClassName('html')[0].getElementsByTagName('p')), ...Array.from(document.getElementsByClassName('html')[0].getElementsByTagName('section'))].forEach(e => {
+            if (!Array.from(e.children).some(ee => ee.tagName === 'IMG' || ee.tagName === 'VIDEO')) {
+              e.style.textIndent = '2em'
+            }
+          })
+        })
       }).finally(() => this._loading.close())
     },
     detail(item) {
