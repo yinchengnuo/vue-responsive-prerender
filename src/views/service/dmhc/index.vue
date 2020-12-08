@@ -31,35 +31,10 @@
     <div class="sec3 overflow">
       <div class="sec-t">六大核心优势</div>
       <div class="content">
-        <div class="item">
-          <img src="@/assets/service/dmhc/11.png">
-          <p>12年教育经验积累</p>
-          <span>依照感统训练的五个阶段，遵从儿童能力发展七个层次，涉及感统训练十八项指标。</span>
-        </div>
-        <div class="item">
-          <img src="@/assets/service/dmhc/22.png">
-          <p>12年教育经验积累</p>
-          <span>依照感统训练的五个阶段，遵从儿童能力发展七个层次，涉及感统训练十八项指标。</span>
-        </div>
-        <div class="item">
-          <img src="@/assets/service/dmhc/33.png">
-          <p>12年教育经验积累</p>
-          <span>依照感统训练的五个阶段，遵从儿童能力发展七个层次，涉及感统训练十八项指标。</span>
-        </div>
-        <div class="item">
-          <img src="@/assets/service/dmhc/44.png">
-          <p>12年教育经验积累</p>
-          <span>依照感统训练的五个阶段，遵从儿童能力发展七个层次，涉及感统训练十八项指标。</span>
-        </div>
-        <div class="item">
-          <img src="@/assets/service/dmhc/55.png">
-          <p>12年教育经验积累</p>
-          <span>依照感统训练的五个阶段，遵从儿童能力发展七个层次，涉及感统训练十八项指标。</span>
-        </div>
-        <div class="item">
-          <img src="@/assets/service/dmhc/66.png">
-          <p>12年教育经验积累</p>
-          <span>依照感统训练的五个阶段，遵从儿童能力发展七个层次，涉及感统训练十八项指标。</span>
+        <div v-for="(item, index) in longs" :key="index" class="item">
+          <img :src="item.img">
+          <p>{{ item.t1 }}</p>
+          <span>{{ item.t2 }}</span>
         </div>
       </div>
     </div>
@@ -73,7 +48,19 @@
 
 <script>
 export default {
-  name: 'ServiceDmhc'
+  name: 'ServiceDmhc',
+  data() {
+    return {
+      longs: [
+        { img: require('@/assets/service/dmhc/11.png'), t1: '12年教育经验积累', t2: '依照感统训练的五个阶段，遵从儿童能力发展七个层次，涉及感统训练十八项指标。' },
+        { img: require('@/assets/service/dmhc/22.png'), t1: '100名专业感统训练师', t2: '拥有教师资格证，训练师经过6+1培训正式上岗，经过专业感统训练师资培训。' },
+        { img: require('@/assets/service/dmhc/33.png'), t1: '20个国际标准感统训练室', t2: '目前中心拥有实训场地3000余平，在训儿童1500名左右，用标准感统成就孩子美好人生。' },
+        { img: require('@/assets/service/dmhc/44.png'), t1: '十万份测评案例', t2: '5000多名教学样本，让我们有能力帮助你的孩子；10万份测评案例，让我们的训练具有针对性。' },
+        { img: require('@/assets/service/dmhc/55.png'), t1: '每月专家答疑', t2: '每月定期老岳与家长面对面答疑，有什么问题，直接问老岳。' },
+        { img: require('@/assets/service/dmhc/66.png'), t1: '课程自主研发', t2: '引进“感统之父”艾尔斯博士感觉统合理论，并自主研发课程体系，使其更适合中国儿童。' }
+      ]
+    }
+  }
 }
 </script>
 
