@@ -87,7 +87,7 @@
       </div>
     </div>
     <div class="join-now">
-      <img class="bg" src="@/assets/index/footer.png">
+      <img class="bg" src="@/assets/index/footer.jpg">
       <div class="title">与老岳一起，与感统教育同行，全国招募合作伙伴</div>
       <div class="join" @click="$d">立即报名</div>
     </div>
