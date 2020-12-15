@@ -3,6 +3,7 @@
     <img src="@/assets/service/dmhc/banner.png" class="banner">
     <div class="sec1 overflow">
       <div class="content">
+        <img src="@/assets/service/dmhc/banner1.png">
         <div class="cont">
           <p>郑州动漫火车儿童感统训练中心</p>
           <p>郑州动漫火车儿童感统训练中心，国内首家全能化感统训练机构，成立于2008年，是老岳讲感统实训基地，全国感统训练师资培训基地、北京学前教育协会会员单位。中心目前拥有室内实训场地2000余平，户外阳光训练场300平，平均100平超大国际标准感统训练教室7个，国际一流感统训练教具300多种，专业感统训练师70余名，在训儿童1500名左右。</p>

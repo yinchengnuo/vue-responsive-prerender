@@ -2,7 +2,7 @@
   <div class="honor overflow">
     <div class="content">
       <div class="left">
-        <span :class="{ active: type === 0 }" @click="switc(0)">岳老师荣誉</span>
+        <span :class="{ active: type === 0 }" @click="switc(0)">老岳荣誉</span>
         <span :class="{ active: type === 1 }" @click="switc(1)">动漫火车荣誉</span>
       </div>
       <div class="cent">
@@ -18,7 +18,8 @@
           <i class="el-icon-arrow-up" @click="$refs.swiper1.$emit('slidePre')" />
           <div class="swiper-wrapper">
             <slider ref="swiper2" class="swiper" :options="{ ...options, direction: 'vertical', freeze: true }" @slide="({ currentPage }) => slide(1, currentPage)">
-              <slideritem v-for="(item,index) in list" :key="index" @tap="$refs.swiper1.$emit('slideTo', index); $refs.swiper2.$emit('slideTo', index)">
+              <!-- <slideritem v-for="(item,index) in list" :key="index" @tap="$refs.swiper1.$emit('slideTo', index); $refs.swiper2.$emit('slideTo', index)"> -->
+              <slideritem v-for="(item,index) in list" :key="index">
                 <span>{{ item.text }}</span>
               </slideritem>
             </slider>
@@ -30,7 +31,7 @@
 
     <div class="contentMo">
       <div class="nav">
-        <span :class="{ active: type === 0 }" @click="switc(0)">岳老师荣誉</span>
+        <span :class="{ active: type === 0 }" @click="switc(0)">老岳荣誉</span>
         <span :class="{ active: type === 1 }" @click="switc(1)">动漫火车荣誉</span>
       </div>
       <slider ref="swiper" class="swiper" :options="options">

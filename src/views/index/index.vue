@@ -2,7 +2,6 @@
   <div class="index">
     <div class="sec1">
       <video ref="video" src="https://dmhc-admin.oss-cn-beijing.aliyuncs.com/website/366587712495573.6.index.mp4" loop muted />
-
       <div class="news">
         <span @click="$router.push('/media')">NEWS</span>
         <div class="center">
@@ -69,6 +68,7 @@
       </div>
     </div>
     <div class="split" />
+
     <div class="sec3 overflow">
       <div class="sec-t">产品与服务 赋能中国早幼教</div>
       <div class="sec-st">结合中国传统家庭教育习惯，推出符合中国国情感统教育体系</div>
@@ -127,7 +127,7 @@
       </div>
       <div class="contentMo">
         <slider ref="sec3SwiperMo" class="swiper" :options="{ ...sec3.options, pagination: true, loop: true, centeredSlides: true }" @slide="({ currentPage }) => sec3.active = currentPage.toString()">
-          <slideritem>
+          <slideritem @tap="$router.push('/service/lyjgt')">
             <img class="logo" src="@/assets/index/sec3-logo1.png">
             <img class="top" src="@/assets/index/sec3-banner1.jpg">
             <div class="n">老岳讲感统</div>
@@ -149,7 +149,7 @@
               </div>
             </div>
           </slideritem>
-          <slideritem>
+          <slideritem @tap="$router.push('/service/dmhc')">
             <img class="logo" src="@/assets/index/sec3-logo2.png">
             <img class="top" src="@/assets/index/sec3-banner2.png">
             <div class="n">动漫火车感统</div>

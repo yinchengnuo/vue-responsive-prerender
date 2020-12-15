@@ -71,13 +71,13 @@
         <img class="close" src="@/assets/layout/mo-close.png" @click="show = false">
         <img v-if="type === 1" class="code" src="@/assets/layout/dy-code.png">
         <img v-if="type === 2" class="code" src="@/assets/layout/wx-code.png">
-        <span v-if="type === 1" class="t">关注老岳官方微信号 </span>
-        <span v-if="type === 2" class="t">关注老岳官方抖音号 </span>
+        <span v-if="type === 2" class="t">关注老岳官方微信号 </span>
+        <span v-if="type === 1" class="t">关注老岳官方抖音号 </span>
         <span class="st">专家为您答疑，惊喜大礼活动！</span>
-        <span class="save" @click="$download(type === 1 ? require('@/assets/layout/dy-code.png') : require('@/assets/layout/wx-code.png'))">
+        <!-- <span class="save" @click="$download(type === 1 ? require('@/assets/layout/dy-code.png') : require('@/assets/layout/wx-code.png'))">
           <img src="@/assets/layout/mo-down.png">
           <span>保存至相册</span>
-        </span>
+        </span> -->
       </div>
     </van-overlay>
   </div>
