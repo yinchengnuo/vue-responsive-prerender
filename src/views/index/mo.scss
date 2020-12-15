@@ -2,35 +2,6 @@
   .index {
     .sec1 {
       display: none;
-      // .news, .mouse {
-      //   display: none;
-      // }
-      // &::before {
-      //   content: "";
-      //   z-index: 0;
-      //   background: rgba(0, 0, 0, .5);
-      //   @include abs(0, 0, 100%, 100%);
-      //   background-image: url("../../assets//index/mask.png");
-      // }
-      // @include flex();
-      // position: relative;
-      // height: calc(100vh - 100vw / 750 * (95 + 100));
-      // video {
-      //   z-index: -1;
-      //   object-fit: cover;
-      //   @include abs(0, 0, 100%, 100%)
-      // }
-      // .mo-center {
-      //   z-index: 2;
-      //   width: rpx(493);
-      //   position: relative;
-      // }
-      // .mo-more {
-      //   animation: more 1s infinite linear;
-      //   @include abs(auto, 50%, rpx(48), rpx(48));
-      //   margin-left: rpx(-24);
-      //   bottom: rpx(48);
-      // }
     }
     .sec2 {
       height: rpx(789);
