@@ -63,6 +63,13 @@ export default {
               e.style.textIndent = '2em'
             }
           })
+          Array.from(document.getElementsByTagName('strong')).forEach(e => {
+            if (e.innerText.includes('End')) {
+              e.style.textIndent = '0'
+              e.style.display = 'block'
+              e.style.textAlign = 'center'
+            }
+          })
         })
       }).finally(() => this._loading.close())
     },

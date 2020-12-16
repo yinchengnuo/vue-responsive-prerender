@@ -16,7 +16,10 @@
     }
     .html {
       ::v-deep {
-        section, p {
+        .rich_media_meta_list {
+          text-indent: 2em;
+        }
+        div, section, p {
           font-weight: 400;
           margin: rpx(8) 0;
           color: #606060;

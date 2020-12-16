@@ -1,0 +1,132 @@
+@media screen and (min-width: 1200px) {
+  .side {
+    top: 50%;
+    z-index: 666;
+    right: px(14);
+    position: fixed;
+    width: 73px;
+    height: 206px;
+    transform: translateY(-50%);
+    .bar {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      background: #FFFFFF;
+      @include flex(column);
+      justify-content: space-between;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      > div {
+        flex: 1;
+        width: 100%;
+        @include flex();
+        cursor: pointer;
+        position: relative;
+        a {
+          width: 100%;
+          height: 100%;
+          @include flex();
+        }
+        img {
+          width: 48px;
+          height: 48px;
+        }
+        .text {
+          font-size: 20;
+          font-weight: 600;
+          color: #2487FF;
+          line-height: 24px;
+          letter-spacing: 3px;
+        }
+        &.mid {
+          .tel-wrapper {
+            padding-right: 8px;
+            box-sizing: border-box;
+            @include abs(0px, -270px, 270px, 262px);
+            .tel-content {
+              height: 100%;
+              @include flex(column);
+              border-radius: 8px;
+              @include flex(column);
+              background: #FFFFFF;
+              justify-content: flex-start;
+              border: 1px solid rgba(0, 0, 0, 0.1);
+              > img {
+                width: 100%;
+                height: 153px;
+                margin-bottom: 24px;
+              }
+              .t {
+                font-size: 20px;
+                font-weight: 500;
+                color: #2B303A;
+                line-height: 32px;
+                margin-bottom: 8px;
+              }
+              .tel {
+                @include flex();
+                font-size: 20px;
+                font-weight: 500;
+                color: #2487FF;
+                line-height: 28px;
+                letter-spacing: 1px;
+                img {
+                  width: 20px;
+                  height: 20px;
+                  margin-right: 8px;
+                }
+              }
+            }
+          }
+        }
+        &.top, &.bot {
+          .code-wrapper {
+            padding-right: 8px;
+            box-sizing: border-box;
+            @include abs(0, -122px, 122px, 142px);
+            .code-content {
+              height: 100%;
+              border-radius: 5px;
+              @include flex(column);
+              background: #FFFFFF;
+              box-sizing: border-box;
+              border: 1px solid rgba(0, 0, 0, 0.1);
+              > img {
+                width: 80px;
+                height: 80px;
+                object-fit: cover;
+              }
+              > .bottom {
+                @include flex();
+                margin-top: 8px;
+                > img {
+                  width: 16px;
+                  height: 16px;
+                  object-fit: cover;
+                  margin-right: 2px;
+                }
+                > span {
+                  font-size: 14px;
+                  font-weight: 400;
+                  color: #2B303A;
+                  line-height: 20px;
+                }
+              } 
+            }
+          }
+        }
+      }
+      > span {
+        height: px(1);
+        width: px(60);
+        background: rgba(237, 241, 246, 1);
+      }
+    }
+  }
+  
+  .fade-enter-active, .fade-leave-active {
+    transition: all .6s;
+  }
+  .fade-enter, .fade-leave-to {
+    opacity: 0;
+  }
+}

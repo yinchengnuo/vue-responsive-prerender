@@ -10,6 +10,7 @@
       <div class="text">我们的老师会第一时间与您取得联系～</div>
     </el-dialog>
     <Header />
+    <Side />
     <keep-alive>
       <router-view />
     </keep-alive>
@@ -19,12 +20,13 @@
 
 <script>
 import { api_message } from '@/api'
+import Side from './components/Side/index'
 import Header from './components/Header/index'
 import Footer from './components/Footer/index'
 
 export default {
   name: 'Layout',
-  components: { Header, Footer },
+  components: { Header, Side, Footer },
   data() {
     return {
       tel: '',
