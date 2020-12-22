@@ -11,12 +11,12 @@
         <div v-if="data.recommend && data.recommend[0]" class="article" @click="detail(data.recommend[0])">
           <img :src="data.recommend[0].pic">
           <div class="title">{{ data.recommend[0].title }}</div>
-          <div class="date">{{ (new Date( data.recommend[0].create_time)).getFullYear() }}.{{ (new Date( data.recommend[0].create_time)).getMonth() }}.{{ (new Date( data.recommend[0].create_time)).getDate() }}</div>
+          <div class="date">{{ (new Date( data.recommend[0].create_time)).getFullYear() }}.{{ (new Date( data.recommend[0].create_time)).getMonth() + 1 }}.{{ (new Date( data.recommend[0].create_time)).getDate() }}</div>
         </div>
         <div v-if="data.recommend && data.recommend[1]" class="article" @click="detail(data.recommend[1])">
           <img :src="data.recommend[1].pic">
           <div class="title">{{ data.recommend[1].title }}</div>
-          <div class="date">{{ (new Date(data.recommend[1].create_time)).getFullYear() }}.{{ (new Date(data.recommend[1].create_time)).getMonth() }}.{{ (new Date(data.recommend[1].create_time)).getDate() }}</div>
+          <div class="date">{{ (new Date(data.recommend[1].create_time)).getFullYear() }}.{{ (new Date(data.recommend[1].create_time)).getMonth() + 1 }}.{{ (new Date(data.recommend[1].create_time)).getDate() }}</div>
         </div>
       </div>
     </div>

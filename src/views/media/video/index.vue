@@ -4,12 +4,12 @@
       <div v-for="(item, index) in list" :key="index" class="item" @click="detail(item)">
         <img :src="item.pic" class="poster">
         <div class="title">{{ item.title }}</div>
-        <span>{{ (new Date(item.create_time)).getFullYear() }}.{{ (new Date(item.create_time)).getMonth() }}.{{ (new Date(item.create_time)).getDate() }}</span>
+        <span>{{ (new Date(item.create_time)).getFullYear() }}.{{ (new Date(item.create_time)).getMonth() + 1 }}.{{ (new Date(item.create_time)).getDate() }}</span>
       </div>
       <div v-for="(item, index) in list" :key="index + 999999" class="itemMo" @click="detail(item)">
         <div class="left">
           <div class="title">{{ item.title }}</div>
-          <span>{{ (new Date(item.create_time)).getFullYear() }}.{{ (new Date(item.create_time)).getMonth() }}.{{ (new Date(item.create_time)).getDate() }}</span>
+          <span>{{ (new Date(item.create_time)).getFullYear() }}.{{ (new Date(item.create_time)).getMonth() + 1 }}.{{ (new Date(item.create_time)).getDate() }}</span>
         </div>
         <img :src="item.pic" class="poster">
       </div>
