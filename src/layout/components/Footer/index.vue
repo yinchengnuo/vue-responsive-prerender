@@ -21,7 +21,7 @@
     </div>
     <div class="bottom">
       <div class="bottom-content">
-        <div class="web">Copyright © 2008-2020 老岳讲感统 版权所有   豫ICP备16027150号-1</div>
+        <div class="web"><a href="https://beian.miit.gov.cn/" target="_blank">豫ICP备19011654号 河南老岳讲感统教育科技有限公司 版权所有</a></div>
         <div class="icon">
           <div class="item">
             <img class="icon" src="@/assets/layout/douyin.png">
@@ -64,7 +64,7 @@
           <router-link class="router-link" to="/duty/tour">老岳的三尺讲台</router-link>
         </van-collapse-item>
       </van-collapse>
-      <div class="mo-bottom">豫ICP备16027150号-1   I   Copyright © 2008-2020 河南老岳讲感统教育科技有限公司 版权所有</div>
+      <div class="mo-bottom"><a href="https://beian.miit.gov.cn/" target="_blank">豫ICP备19011654号 河南老岳讲感统教育科技有限公司 版权所有</a></div>
     </div>
     <van-overlay :show="show" @click="show = false">
       <div class="wrapper" @click.stop>
